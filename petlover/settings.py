@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['8000-naisepaul-petlover-proje-ei541ie28e.us2.codeanyapp.com']
-ALLOWED_HOSTS = ['petlover.herokuapp', 'localhost']
+ALLOWED_HOSTS = ['petlover-6900a2845617.herokuapp', 'localhost']
 
 
 # Application definition
