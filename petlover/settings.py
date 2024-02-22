@@ -33,7 +33,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['8000-naisepaul-petlover-proje-ei541ie28e.us2.codeanyapp.com'
                 # ,'.herokuapp.com']
-ALLOWED_HOSTS = ['petlover-6900a2845617.herokuapp.com' , 'localhost']
+ALLOWED_HOSTS = ['8000-naisepaul-petloverproje-om1xjwoa24c.ws-eu108.gitpod.io'
+                ,'.herokuapp.com']
 
 
 # Application definition
