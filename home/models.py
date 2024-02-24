@@ -7,13 +7,19 @@ import uuid
 # Create your models here.
 
 class Dog(models.Model):
+    SEX_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),     
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=100)
     breed = models.CharField(max_length=100)
-    age = models.IntegerField()
-    
+    date_of_birth = models.DateField()
+    sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='M')
+    description = models.TextField(null=True, blank=True)
+
     def __str__(self):
-        return self.name
+        return self.breed
 
 # class Listing(models.Model):
 #     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
