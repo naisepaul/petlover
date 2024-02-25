@@ -14,7 +14,7 @@
   <header>
     <nav class="navbar bg-primary navbar-expand-lg navbar-dark header-nav">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img class="petlover_logo" style="max-width: 200px;"
             src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1708884631/logo_qdrjfr.png" alt="petlover logo">
         </a>
@@ -23,13 +23,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+          
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Listings</a>
+              <a class="nav-link" href="{% url 'listings' %}">Listings</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">LogIn / Sign Up</a>
