@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'indie flower';
+}
+
+/* Body background-image and details */
+#hero-image {
+    background-image: url(https://res.cloudinary.com/dmhdrvehj/image/upload/v1708987636/hero-image_dlehwh.png);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: auto;
+}
+
+/* Navbar */
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--black);
+    font-weight: 800;
+}
