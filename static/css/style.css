@@ -4,17 +4,19 @@
 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'indie flower';
 }
+body {
+    background-color: rgb(154, 179, 209);
+    font-family: 'Roboto Slab', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Body background-image and details */
+/* Body background-image  details */
 #hero-image {
-    background-image: url(https://res.cloudinary.com/dmhdrvehj/image/upload/v1708987636/hero-image_dlehwh.png);
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    width: auto;
+    
+    padding: 10px; 
 }
 
 /* Navbar */
@@ -23,3 +25,4 @@
     color: var(--black);
     font-weight: 800;
 }
+
