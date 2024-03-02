@@ -7,3 +7,6 @@ def index(request):
 
 def listings(request):
     return render(request,'listings.html')
+
+def signup(request):
+    return render(request,'account/signup.html')
