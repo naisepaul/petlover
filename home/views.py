@@ -25,8 +25,7 @@ def signup(request):
                 messages.info(request,"Username is taken")
                 return redirect('/signup')                
         except:
-            pass
-        
+            pass        
         try: 
             if User.objects.get(email = email):
                 messages.info(request,"Email is taken")

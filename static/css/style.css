@@ -15,10 +15,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;    
     display: flex;
+    height: 600px;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    padding: 5px;
+    padding: 25px;
 
 }
 
