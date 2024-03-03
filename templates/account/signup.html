@@ -13,38 +13,49 @@ Sign Up
 		<div class="col-md-6">
 			<div class="card">
 				<div class="card-header">
-					Sign Up
+					Sign Up Here
 				</div>
+				{% for message in messages %}
+				<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+					<strong></strong> {{message}}
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				{% endfor %}
 				<div class="card-body">
-					<form action = "{% url 'signup' %}" method = "post">
+					<form action="{% url 'signup' %}" method="post">
 						{% csrf_token %}
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" class="form-control" id="name" name = "fname" placeholder="Enter your name" required>
-						</div>												
-						
+							<input type="text" class="form-control" id="name" name="fname" placeholder="Enter your name"
+								required>
+						</div>
+
 						<div class="form-group">
 							<label for="username">Username</label>
-							<input type="text" class="form-control" id="username" name= "username" placeholder="Enter username" required>
+							<input type="text" class="form-control" id="username" name="username"
+								placeholder="Enter username" required>
 						</div>
 						<div class="form-group">
 							<label for="email">Email address</label>
-							<input type="email" class="form-control" id="email" name= "email" placeholder="Enter email" required>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+								required>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="password" name= "password1" placeholder="Enter password" required>
+							<input type="password" class="form-control" id="password" name="password1"
+								placeholder="Enter password" required>
 						</div>
 						<div class="form-group">
 							<label for="password1">Confirm Password</label>
-							<input type="password" class="form-control" id="password1" name= "password2"  placeholder="Confirm password" required>
+							<input type="password" class="form-control" id="password1" name="password2"
+								placeholder="Confirm password" required>
 						</div>
 						<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
 					</form>
 				</div>
 				<div class="card-footer text-center">
 					<div class="text-center">
-						<a href="{% url 'login' %}" style="color: #007bff;">Already have an account?   Log In
+						<a href="{% url 'login' %}" style="color: #007bff;">Already have an account? Log In
 						</a>
 					</div>
 				</div>
