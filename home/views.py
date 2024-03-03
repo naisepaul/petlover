@@ -16,7 +16,8 @@ def signup(request):
         email = request.POST.get('email')        
         password = request.POST.get('password1')
         confirmpassword = request.POST.get('password2')
-        
+        if password != confirmpassword:
+            return HttpResponse("Password Incorrect")
         myuser = User.objects.create_user(uname, email, password)
         myuser.save()
         return HttpResponse("Signup Succesfull")
