@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: rgb(154, 179, 209);        
+    background-color: rgb(154, 179, 209);  
+       
 }
 
 /* Body background-image  details */
@@ -20,20 +21,8 @@ body {
     align-items: flex-end;
     justify-content: center;
     padding: 25px;
-
 }
 
-/* Navbar */
-
-/* .navbar-dark .navbar-nav .nav-link {
-    color: var(--black);
-    font-weight: 800;
-} */
-
-
-/* body {
-    background-color: #f8f9fa;
-} */
 
 /* styles for sign up and login form */
 
@@ -62,4 +51,43 @@ body {
 .card-footer {
     background-color: #f8f9fa;
     border-top: none;
+}
+
+/* styles for logout page */
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
 }

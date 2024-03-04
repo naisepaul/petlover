@@ -57,6 +57,8 @@ def signup(request):
     return render(request,'account/signup.html')   
 
 def logoutconfirm(request):
-    logout(request)
-    messages.info(request,"Successfully Logout")
-    return redirect('/')
+    if request.method == 'POST':
+        logout(request)
+        messages.info(request,"Successfully Logout")
+        return redirect('/')
+    return render(request, 'account/logout.html')

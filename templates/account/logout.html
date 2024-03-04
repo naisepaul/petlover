@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Log in
+{% endblock title %}
+
+{% block body %}
+{% block logoutconfirmactive %}active{% endblock logoutconfirmactive %}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Are you sure you want to log out?</h2>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'logoutconfirm' %}" method="post">
+                        {% csrf_token %}
+                        <div class="text-center mb-3"> <!-- Center buttons -->
+                            <button type="submit" class="btn btn-primary mr-2">Logout</button>
+                            <a href="{% url 'home' %}" class="btn btn-primary">Go Home</a>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>        
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock body %}
