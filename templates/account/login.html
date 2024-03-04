@@ -14,26 +14,30 @@ Log in
                 <div class="card-header text-center">
                     Login
                 </div>
+                <!-- Messages for info, success, error,warning  -->
                 {% for message in messages %}
-				<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-					<strong></strong> {{message}}
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>
-				{% endfor %}
+                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong></strong> {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+
                 <div class="card-body">
-                    <form action = "{% url 'login_account' %}" method = "post">
+                    <form action="{% url 'login_account' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="loginUsername">Username</label>
-                            <input type="text" class="form-control" id="loginUsername" name = "username" placeholder="Enter username" required>
+                            <input type="text" class="form-control" id="loginUsername" name="username"
+                                placeholder="Enter username" required>
                         </div>
                         <div class="form-group">
                             <label for="loginPassword">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" name= "password1" placeholder="Enter password" required>
-                        </div>                        
+                            <input type="password" class="form-control" id="loginPassword" name="password1"
+                                placeholder="Enter password" required>
+                        </div>
                         <div class="text-center mb-3">
-							<button type="submit" class="btn btn-primary mr-2">Login</button>
-						</div>
+                            <button type="submit" class="btn btn-primary mr-2">Login</button>
+                        </div>
                     </form>
                 </div>
                 <div class="card-footer text-center">
