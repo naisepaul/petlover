@@ -21,7 +21,7 @@ Log in
 				</div>
 				{% endfor %}
                 <div class="card-body">
-                    <form action = "{% url 'login' %}" method = "post">
+                    <form action = "{% url 'login_account' %}" method = "post">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="loginUsername">Username</label>

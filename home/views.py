@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 # Create your views here.
@@ -12,16 +12,16 @@ def listings(request):
 
     return render(request,'listings.html')
 
-def login(request):
+def login_account(request):
 
     if request.method == "POST":
         uname = request.POST.get('username')             
         pass1 = request.POST.get('password1')
         myuser= authenticate(username=uname, password=pass1)
-        if myuser is not None:
-            # login(request, myuser)            
+        if myuser is not None:   
+            login(request, myuser)                     
             messages.success(request,"Login Success")
-            return redirect('/')            
+            return redirect('/')                        
         else:
             messages.warning(request,"Invalid Credentials")
             return redirect('/login')
@@ -55,3 +55,8 @@ def signup(request):
         messages.info(request,"Sign Up Success")
         return redirect('/login') 
     return render(request,'account/signup.html')   
+
+def logoutconfirm(request):
+    logout(request)
+    messages.info(request,"Successfully Logout")
+    return redirect('/')
