@@ -9,10 +9,10 @@ Sign Up
 {% block signupactive %}active{% endblock signupactive %}
 
 <div class="container mt-5">
-	<div class="row justify-content-center">
+	<div class="row justify-content-center align-items-center">
 		<div class="col-md-6">
 			<div class="card">
-				<div class="card-header">
+				<div class="card-header text-center">
 					Sign Up Here
 				</div>
 				{% for message in messages %}
@@ -50,9 +50,12 @@ Sign Up
 							<input type="password" class="form-control" id="password1" name="password2"
 								placeholder="Confirm password" required>
 						</div>
-						<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+						<div class="text-center mb-3">
+							<button type="submit" class="btn btn-primary mr-2">Sign Up</button>
+						</div>
 					</form>
 				</div>
+
 				<div class="card-footer text-center">
 					<div class="text-center">
 						<a href="{% url 'login_account' %}" style="color: #007bff;">Already have an account? Log In
