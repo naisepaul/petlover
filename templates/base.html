@@ -27,25 +27,27 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link {% block homeactive %}{% endblock homeactive %}" aria-current="page"
+              <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page"
                 href="{% url 'home' %}">Home</a>
             </li>
+            
             <li class="nav-item">
-              <a class="nav-link {% block listingsactive %}{% endblock listingsactive %}"
+              <a class="nav-link {% if request.path == '/listings/' %}active{% endif %}"
                 href="{% url 'listings' %}">Listings</a>
             </li>
-
+            
             {% if not request.user.is_authenticated %}
 
             <li class="nav-item">
-              <a class="nav-link {% block signupactive %}{% endblock signupactive %}"
-                href="{% url 'login_account' %}">LogIn /
-                Sign Up</a>
+              <a class="nav-link {% if request.path == '/login/' %}active{% endif %}"
+                href="{% url 'login_account' %}">LogIn / Sign Up</a>
             </li>
+            
             {% else %}
             {{request.user}}
             <li class="nav-item">
-              <a class="nav-link " href="{% url 'logoutconfirm' %}">Log Out</a>
+              <a class="nav-link" 
+                href="{% url 'logoutconfirm' %}">Log Out</a>
             </li>
 
             {% endif %}
