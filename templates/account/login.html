@@ -11,10 +11,10 @@ Log in
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6 mt-3">
             <div class="card">
-                <div class="card-header text-center">
-                    Login
+                <div class="card-header text-center text-uppercase">
+                    <strong>Login</strong>
                 </div>
-                <!-- Messages for info, success, error,warning  -->
+                <!-- Alert Messages for info, success, error,warning  -->
                 {% for message in messages %}
                 <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
                     <strong></strong> {{message}}
