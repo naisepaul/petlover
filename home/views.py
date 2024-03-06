@@ -12,6 +12,10 @@ def listings(request):
 
     return render(request,'listings.html')
 
+def create_listings(request):
+
+    return render(request,'create_listings.html')
+
 def login_account(request):
 
     if request.method == "POST":
