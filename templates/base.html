@@ -17,7 +17,7 @@
     <nav class="navbar bg-primary navbar-expand-lg navbar-dark header-nav">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
-          <img class="petlover_logo" style="max-width: 200px;"
+          <img class="petlover_logo" 
             src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1708884631/logo_qdrjfr.png" alt="petlover logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
@@ -44,10 +44,10 @@
             </li>
             
             {% else %}
-            {{request.user}}
+            
             <li class="nav-item">
-              <a class="nav-link" 
-                href="{% url 'logoutconfirm' %}">Log Out</a>
+              <a class="nav-link {% if request.path == '/logout/' %}active{% endif %}" 
+                href="{% url 'logoutconfirm' %}">{{request.user}} Log Out</a>
             </li>
 
             {% endif %}
