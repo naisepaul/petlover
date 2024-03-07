@@ -33,6 +33,7 @@ def login_account(request):
     return render(request,'account/login.html')
 
 def signup(request):
+    
     if request.method == "POST":
         name = request.POST.get('fname')   
         uname = request.POST.get('username')      
