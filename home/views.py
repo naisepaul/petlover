@@ -5,19 +5,24 @@ from django.contrib import messages
 
 # Create your views here.
 
+# Home page
+
 def index(request):
     return render(request,'index.html')
 
-def listings(request):
+# dog listing page
 
+def listings(request):
     return render(request,'listings.html')
 
-def create_listings(request):
+# create listings page
 
+def create_listings(request):
     return render(request,'create_listings.html')
 
-def login_account(request):
+# user login page
 
+def login_account(request):
     if request.method == "POST":
         uname = request.POST.get('username')             
         pass1 = request.POST.get('password1')
@@ -29,11 +34,11 @@ def login_account(request):
         else:
             messages.warning(request,"Invalid Credentials")
             return redirect('/login')
-
     return render(request,'account/login.html')
 
-def signup(request):
-    
+# New user signup page
+
+def signup(request):   
     if request.method == "POST":
         name = request.POST.get('fname')   
         uname = request.POST.get('username')      
@@ -61,9 +66,16 @@ def signup(request):
         return redirect('/login') 
     return render(request,'account/signup.html')   
 
+# user logout page
+
 def logoutconfirm(request):
     if request.method == 'POST':
         logout(request)
         messages.info(request,"Successfully Logout")
         return redirect('/')
     return render(request, 'account/logout.html')
+
+# user profile page
+
+def profile_page(request):
+    return render(request,'profile/profile_page.html')
