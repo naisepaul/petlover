@@ -5,5 +5,45 @@ My Profile
 {% endblock title %}
 
 {% block body %}
+<style>
+    .profile-box {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+    }
 
+    .profile-picture {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left side: Profile and Listings -->
+        <div class="col-lg-4 mb-3">
+            <div class="profile-box ">
+                <p>Profile</p>
+                <p>My Listings</p>
+            </div>
+        </div>
+        <!-- Right side: Profile Picture, Name, Email, Phone Number -->
+        <div class="col-lg-8">
+            <div class="profile-box">
+                <div class="text-center mb-3">
+                    <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp"
+                        class="profile-picture rounded-circle" alt="Profile Picture">
+                </div>
+                <h5 class="mb-3">{{user.username}}</h5>
+                <p>{{user.email}}</p>
+                <!-- <p>{{user.uname}}</p> -->
+                <div class="text-center mb-3">
+                    <a href="{% url 'home' %}" class="btn btn-primary text-white">Edit Profile</a>
+                    <a href="{% url 'create-listings' %}" class="btn btn-danger text-white">Delete
+                        Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock body %}

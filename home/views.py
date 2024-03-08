@@ -62,7 +62,7 @@ def signup(request):
             pass
         myuser = User.objects.create_user(uname, email, password)
         myuser.save()
-        messages.info(request,"Sign Up Success")
+        messages.info(request,"Sign Up Success. Now you can Login")
         return redirect('/login') 
     return render(request,'account/signup.html')   
 
