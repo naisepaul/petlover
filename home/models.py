@@ -16,7 +16,7 @@ class Profile(models.Model):
     # profile_image = models.ImageField(
     #     upload_to='user_photos/', blank=True,
     #     null=True)
-    profile_image = CloudinaryField('image', default='https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp')
+    profile_image = CloudinaryField('image')
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           editable=False, primary_key=True)
 
