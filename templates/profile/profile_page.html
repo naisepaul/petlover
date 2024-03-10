@@ -28,22 +28,33 @@ My Profile
             </div>
         </div>
         <!-- Right side: Profile Picture, Name, Email, Phone Number -->
+
         <div class="col-lg-8">
-            <div class="profile-box">
-                <div class="text-center mb-3">
-                    <img src="{{ user.profile_image.url }}"
-                        class="profile-picture rounded-circle" style="width: 370px; height: 300px; object-fit: cover;" alt="Profile Picture">
+            <div class="profile-box d-flex">
+                <div class="col-6">
+                    <div class="profile-picture-container">
+                        <div class="text-center">
+                            <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp"
+                                class="profile-picture rounded-circle" alt="Profile Picture"
+                                style="width: 220px; height: 220px; object-fit: cover;">
+                        </div>
+                    </div>
                 </div>
-                <h5 class="mb-3">{{user.username}}</h5>
-                <p>{{user.email}}</p>
-                <!-- <p>{{user.uname}}</p> -->
-                <div class="text-center mb-3">
-                    <a href="{% url 'home' %}" class="btn btn-primary text-white">Edit Profile</a>
-                    <a href="{% url 'create-listings' %}" class="btn btn-danger text-white">Delete
-                        Profile</a>
+                <div class="col-6">
+                    <div class="profile-details-container">
+                        <h5 class="mb-3">{{ request.user.username }}</h5>
+                        <p>{{ request.user.email }}</p>
+                        <p>{{ request.user.profile.name }}</p>
+                        <p>{{ request.user.profile.phone }}</p>
+                        <div class="text-center mt-3">
+                            <a href="{% url 'home' %}" class="btn btn-primary text-white">Edit Profile</a>
+                            <a href="{% url 'create-listings' %}" class="btn btn-danger text-white">Delete Profile</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock body %}
