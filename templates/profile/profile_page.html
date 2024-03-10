@@ -31,8 +31,8 @@ My Profile
         <div class="col-lg-8">
             <div class="profile-box">
                 <div class="text-center mb-3">
-                    <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp"
-                        class="profile-picture rounded-circle" alt="Profile Picture">
+                    <img src="{{ user.profile_image.url }}"
+                        class="profile-picture rounded-circle" style="width: 370px; height: 300px; object-fit: cover;" alt="Profile Picture">
                 </div>
                 <h5 class="mb-3">{{user.username}}</h5>
                 <p>{{user.email}}</p>
