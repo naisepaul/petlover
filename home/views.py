@@ -60,7 +60,7 @@ def signup(request):
                 return redirect('/signup')                
         except:
             pass
-        myuser = User.objects.create_user(uname, email, password)
+        myuser = User.objects.create_user(uname, email, password)        
         myuser.save()
         messages.info(request,"Sign Up Success. Now you can Login")
         return redirect('/login') 
