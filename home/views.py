@@ -8,7 +8,6 @@ from .models import Profile
 from .forms import ProfileForm
 # from .forms import UserUpdateForm, ProfileUpdateForm
 
-
 # Create your views here.
 
 # Home page
@@ -99,10 +98,11 @@ def profile_update(request):
     user_profile, created = Profile.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
-        form = ProfileForm(request.POST, instance=user_profile)
+        form = ProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            messages.success(request,"Updated Successfully")
+            return redirect('/profile-page')
     else:
         form = ProfileForm(instance=user_profile)
 

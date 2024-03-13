@@ -70,7 +70,7 @@ My Profile Update
     {% if user.profile.profile_image %}
         <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture">
     {% endif %}
-    <form method="post">
+    <form method="post" action="{% url 'profile-update' %}" class="mt-3" enctype="multipart/form-data">
         {% csrf_token %}       
         {{ form.as_p }}
         <button type="submit">Save</button>

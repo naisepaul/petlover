@@ -56,11 +56,11 @@ My Profile
                     <div class="profile-details-container">
                         <h5 class="mb-3">{{ user.username }}</h5>
                         <p>{{ user.email }}</p>
-                        <!-- <p>{{ user.profile.name }}</p> -->
-                        <!-- <p>{{ user.profile.phone }}</p> -->
+                        <p>{{ user.profile.name }}</p> 
+                        <p>{{ user.profile.phone }}
                     </div>
                     <div class="text-center mt-3">
-                        <a href="{% url 'home' %}" class="btn btn-primary text-white">Edit Profile</a>
+                        <a href="{% url 'profile-update' %}" class="btn btn-primary text-white">Edit Profile</a>
                         <a href="{% url 'create-listings' %}" class="btn btn-danger text-white">Delete Profile</a>
                     </div>
                 </div>

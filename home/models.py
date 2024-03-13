@@ -13,9 +13,6 @@ class Profile(models.Model):
     name = models.CharField(max_length=200, blank=False, null=True)
     email = models.EmailField(max_length=300, blank=False, null=True)  
     phone = models.CharField(max_length=100, blank=True, null=True)  
-    # profile_image = models.ImageField(
-    #     upload_to='user_photos/', blank=True,
-    #     null=True)
     profile_image = CloudinaryField('image', default = "https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp")
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           editable=False, primary_key=True)
