@@ -33,19 +33,31 @@ My Profile
             <div class="profile-box d-flex">
                 <div class="col-6">
                     <div class="profile-picture-container">
-                        <div class="text-center">
-                            <img src="{{ user.profile.profile_image.url }}" class="profile-picture rounded-circle"
-                            default='https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp'
+                        <img src="{{ user.profile.profile_image.url }}" class="profile-picture rounded-circle"
                                 alt="Profile Picture" style="width: 220px; height: 220px; object-fit: cover;">
-                        </div>
+                        <!-- {% if user.profile %}
+                            {% if user.profile.profile_image %}
+                            <img src="{{ user.profile.profile_image.url }}" class="profile-picture rounded-circle"
+                                alt="Profile Picture" style="width: 220px; height: 220px; object-fit: cover;">
+                            {% else %}
+                            <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp"
+                                class="profile-picture rounded-circle" alt="Profile Picture"
+                                style="width: 220px; height: 220px; object-fit: cover;">
+                            {% endif %}
+                        {% else %}
+                            <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp"
+                                class="profile-picture rounded-circle" alt="Profile Picture"
+                                style="width: 220px; height: 220px; object-fit: cover;">
+                        {% endif %} -->
+
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="profile-details-container">
                         <h5 class="mb-3">{{ user.username }}</h5>
                         <p>{{ user.email }}</p>
-                        <p>{{ user.profile.name }}</p>
-                        <p>{{ user.profile.phone }}</p>
+                        <!-- <p>{{ user.profile.name }}</p> -->
+                        <!-- <p>{{ user.profile.phone }}</p> -->
                     </div>
                     <div class="text-center mt-3">
                         <a href="{% url 'home' %}" class="btn btn-primary text-white">Edit Profile</a>

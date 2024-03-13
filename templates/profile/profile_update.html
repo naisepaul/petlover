@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+My Profile Update
+{% endblock title %}
+
+{% block body %}
+
+<style>
+    /* Style the form container */
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Set the container height to full viewport height */
+    }
+
+    /* Style the profile picture */
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px; /* Add space below the profile picture */
+    }
+
+    /* Style form fields */
+    .form-container form {
+        width: 100%; /* Ensure the form takes up the full width */
+        margin-bottom: 20px; /* Add space below the form */
+    }
+
+    .form-container input[type=text],
+    .form-container input[type=email],
+    .form-container input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Style the form submit button */
+    .form-container button[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Change the button background color on hover */
+    .form-container button[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="form-container">
+    {% if user.profile.profile_image %}
+        <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture">
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}       
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+<!-- <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">Update Profile</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                        value="{{ user.name }}">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                        value="{{ user.username }}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter email" value="{{ user.email }}">
+                </div>
+                <!-- Assuming 'photo' and 'phone' are fields on the user model -->
+                <!-- <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" class="form-control-file" id="photo" value="{{ user.photo.url }}">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number"
+                        value="{{ user.phone }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+{% endblock body %}

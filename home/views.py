@@ -2,6 +2,12 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
+from .models import Profile
+from .forms import ProfileForm
+# from .forms import UserUpdateForm, ProfileUpdateForm
+
 
 # Create your views here.
 
@@ -27,14 +33,15 @@ def login_account(request):
         uname = request.POST.get('username')             
         pass1 = request.POST.get('password1')
         myuser= authenticate(username=uname, password=pass1)
-        if myuser is not None:   
-            login(request, myuser)                     
-            messages.success(request,"Login Success")
+        if myuser is not None:               
+            login(request, myuser)                      
+            messages.success(request,"Login Success")                
             return redirect('/')                        
         else:
             messages.warning(request,"Invalid Credentials")
             return redirect('/login')
-    return render(request,'account/login.html')
+    else:    
+        return render(request,'account/login.html')
 
 # New user signup page
 
@@ -60,7 +67,7 @@ def signup(request):
                 return redirect('/signup')                
         except:
             pass
-        myuser = User.objects.create_user(uname, email, password)        
+        myuser = User.objects.create_user(uname, email, password)            
         myuser.save()
         messages.info(request,"Sign Up Success. Now you can Login")
         return redirect('/login') 
@@ -77,5 +84,26 @@ def logoutconfirm(request):
 
 # user profile page
 
+@login_required
 def profile_page(request):
+    # u_form = UserUpdateForm()
+    # p_form = ProfileUpdateForm()
+
+    # context = {
+    #     'u_form' : u_form,
+    #     'p_form' : p_form
+    # }
     return render(request,'profile/profile_page.html')
+
+def profile_update(request):
+    user_profile, created = Profile.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = ProfileForm(instance=user_profile)
+
+    return render(request, 'profile/profile_update.html', {'form': form})
