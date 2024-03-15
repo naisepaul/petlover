@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from .models import Profile
 from .forms import ProfileForm
-# from .forms import UserUpdateForm, ProfileUpdateForm
 
 # Create your views here.
 
@@ -83,17 +82,11 @@ def logoutconfirm(request):
 
 # user profile page
 
-@login_required
+@login_required(login_url='login')
 def profile_page(request):
-    # u_form = UserUpdateForm()
-    # p_form = ProfileUpdateForm()
-
-    # context = {
-    #     'u_form' : u_form,
-    #     'p_form' : p_form
-    # }
     return render(request,'profile/profile_page.html')
 
+@login_required(login_url='login')
 def profile_update(request):
     user_profile, created = Profile.objects.get_or_create(user=request.user)
 
@@ -107,3 +100,15 @@ def profile_update(request):
         form = ProfileForm(instance=user_profile)
 
     return render(request, 'profile/profile_update.html', {'form': form})
+
+def profile_delete(request):
+    # user = get_object_or_404(User)
+
+    if request.method == 'POST':
+        user = User.objects.get(username=request.user)
+        # If the user confirms the deletion
+        user.delete()
+        return redirect('/')  # Redirect to home
+
+    return render(request, 'profile/profile_delete.html')
+    
