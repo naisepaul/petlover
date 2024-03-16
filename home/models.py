@@ -16,9 +16,7 @@ class Profile(models.Model):
     profile_image = CloudinaryField('image', default = "https://res.cloudinary.com/dmhdrvehj/image/upload/v1709854103/user_photos/default-user-image_jjhzic.webp")
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           editable=False, primary_key=True)
-
-    # def __str__(self):
-    #     return f'{self.user.username} Profile'                         
+                        
     def __str__(self):
         return str(self.username)
 
