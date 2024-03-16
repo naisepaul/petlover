@@ -102,10 +102,11 @@ def profile_update(request):
     return render(request, 'profile/profile_update.html', {'form': form})
 
 def profile_delete(request):
-    # user = get_object_or_404(User)
+    user = get_object_or_404(User, username=request.user.username)
 
+    
     if request.method == 'POST':
-        user = User.objects.get(username=request.user)
+        # user = User.objects.get(username=request.user)
         # If the user confirms the deletion
         user.delete()
         return redirect('/')  # Redirect to home

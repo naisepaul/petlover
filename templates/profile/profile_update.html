@@ -19,7 +19,8 @@ My Profile Update
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh; /* Set the container height to full viewport height */
+        height: 100vh;
+        /* Set the container height to full viewport height */
     }
 
     /* Style the profile picture */
@@ -27,20 +28,23 @@ My Profile Update
         width: 170px;
         height: 100px;
         border-radius: 50%;
-        margin-bottom: 10px; /* Add space below the profile picture */
+        margin-bottom: 10px;
+        /* Add space below the profile picture */
     }
 
     /* Style form fields */
     .form-container form {
-        width: 100%; /* Ensure the form takes up the full width */
-        margin-bottom: 20px; /* Add space below the form */
+        width: 100%;
+        /* Ensure the form takes up the full width */
+        margin-bottom: 20px;
+        /* Add space below the form */
     }
 
     .form-container input[type=text],
     .form-container input[type=email],
     .form-container input[type=password] {
         width: 100%;
-        padding: 12px 20px;        
+        padding: 8px 20px;
         display: inline-block;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -58,7 +62,8 @@ My Profile Update
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        width: calc(50% - 4px); /* Adjust width to fit both buttons in one line */
+        width: calc(50% - 4px);
+        /* Adjust width to fit both buttons in one line */
         text-decoration: none;
         text-align: center;
         display: inline-block;
@@ -74,7 +79,8 @@ My Profile Update
     /* Media query for smaller screens */
     @media only screen and (max-width: 600px) {
         .form-container {
-            max-width: 90%; /* Adjust the maximum width for smaller screens */
+            max-width: 90%;
+            /* Adjust the maximum width for smaller screens */
         }
     }
 </style>
@@ -84,7 +90,7 @@ My Profile Update
         <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture">
     {% endif %}
     <form method="post" action="{% url 'profile-update' %}" class="mt-3" enctype="multipart/form-data">
-        {% csrf_token %}       
+        {% csrf_token %}              
         {{ form.as_p }}
         <div style="display: flex; justify-content: space-between;">
             <button type="submit">Save</button>
@@ -96,9 +102,16 @@ My Profile Update
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="mb-4">Update Profile</h2>
-            <form method="post">
+            {% if user.profile.profile_image %}
+            <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture">
+            {% endif %}
+            <form method="post" action="{% url 'profile-update' %}" class="mt-3" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
+                 {{ form.as_p }} 
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" class="form-control-file" id="photo" value="{{ user.photo.url }}">
+                </div>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" placeholder="Enter your name"
@@ -114,17 +127,16 @@ My Profile Update
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                         placeholder="Enter email" value="{{ user.email }}">
                 </div>
-                <!-- Assuming 'photo' and 'phone' are fields on the user model -->
-                <!-- <div class="form-group">
-                    <label for="photo">Photo</label>
-                    <input type="file" class="form-control-file" id="photo" value="{{ user.photo.url }}">
-                </div>
+
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="text" class="form-control" id="phone" placeholder="Enter your phone number"
                         value="{{ user.phone }}">
                 </div>
-                <button type="submit" class="btn btn-primary">Update Profile</button>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="submit">Save</button>
+                    <a href="{% url 'profile-page' %}" class="btn btn-primary">Go Back</a>
+                </div>
             </form>
         </div>
     </div>
