@@ -1,13 +1,14 @@
 from django.forms import ModelForm
 from django import forms
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import Profile, Dog, Listing
+
+# Profile form
 
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['profile_image','name', 'username', 'email','phone']  # Adjust fields as per your UserProfile model
-
+        fields = ['profile_image','name', 'username', 'email','phone']  
 
     def clean(self):
             cleaned_data = super().clean()
@@ -24,3 +25,16 @@ class ProfileForm(forms.ModelForm):
                 self.add_error('email', 'This email address is already in use.')
                 cleaned_data['email'] = self.instance.user.email
             return cleaned_data    
+
+
+# Dog Listing Form
+
+class DogListingForm(forms.ModelForm):
+    class Meta:
+        model = Dog
+        fields = ['breed', 'DOB', 'sex', 'temperament', 'photo']
+
+class ListingForm(forms.ModelForm):
+    class Meta:
+        model = Listing
+        fields = ['price', 'location', 'description']

@@ -58,5 +58,20 @@ COUNTIES = (
     ('waterford', 'Waterford'),
     ('westmeath', 'Westmeath'),
     ('wexford', 'Wexford'),
-    ('wicklow', 'Wicklow')
+    ('wicklow', 'Wicklow'),
 )
+
+SEX_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),     
+)
+
+TEMPERAMENT = (
+    ('friendly','Friendly'),
+    ('affectionate', 'Affectionate'),
+    ('protective', 'Protective'),
+    ('active', 'Active'),
+    ('loyal', 'Loyal'),
+)
+
+

@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from .models import Profile
-from .forms import ProfileForm
+from .forms import ProfileForm, DogListingForm, ListingForm
+from . import choice
 
 # Create your views here.
 
@@ -13,16 +14,6 @@ from .forms import ProfileForm
 
 def index(request):
     return render(request,'index.html')
-
-# dog listing page
-
-def listings(request):
-    return render(request,'listings.html')
-
-# create listings page
-
-def create_listings(request):
-    return render(request,'create_listings.html')
 
 # user login page
 
@@ -103,7 +94,6 @@ def profile_update(request):
 
 def profile_delete(request):
     user = get_object_or_404(User, username=request.user.username)
-
     
     if request.method == 'POST':
         # user = User.objects.get(username=request.user)
@@ -112,4 +102,30 @@ def profile_delete(request):
         return redirect('/')  # Redirect to home
 
     return render(request, 'profile/profile_delete.html')
+
+
+# dog listing page
+
+def listings_page(request):
+    return render(request,'listings/listings_page.html')
+
+# create listings page
+
+def listing_form(request):
+    if request.method == 'POST':
+        dog_form = DogListingForm(request.POST, request.FILES)
+        listing_form = ListingForm(request.POST)
+        if dog_form.is_valid() and listing_form.is_valid():
+            dog = dog_form.save(commit=False)
+            dog.owner = request.user
+            dog.save()
+            listing = listing_form.save(commit=False)
+            listing.dog = dog
+            listing.save()
+            messages.success(request, 'Your listing has been created!')
+            return redirect('/') 
+    else:
+        dog_form = DogListingForm()
+        listing_form = ListingForm()
+    return render(request, 'listings/listing_form.html', {'dog_form': dog_form, 'listing_form': listing_form})
     
