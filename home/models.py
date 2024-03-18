@@ -42,8 +42,6 @@ class Listing(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=False)
-    # id = models.UUIDField(default=uuid.uuid4, unique=True,
-    #                       primary_key=True, editable=False)
-    
+        
     def __str__(self):
          return f"Listing for {self.dog.breed} - {self.location}"

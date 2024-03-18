@@ -12,5 +12,6 @@ urlpatterns =[
     # path('profile-delete/<int:pk>/', views.profile_delete, name='profile-delete'),
     path('profile-delete/', views.profile_delete, name = 'profile-delete'),
     path('listings/listing-form/',views.listing_form, name = 'listing-form'),
-    path('listings/listings-page/',views.listings_page, name = 'listings-page'),
+    path('listings/listings/',views.listings, name = 'listings'),
+    
 ]

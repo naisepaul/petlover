@@ -18,9 +18,6 @@ My Profile
         height: auto;
     }
 
-    .btn-sidebar.active.bold {
-        font-weight: bold;
-    }
 </style>
 
 <div class="container mt-5">
@@ -68,27 +65,33 @@ My Profile
                     </div>
                 </div>
             </div>
-
             <div id="listings-section" class="profile-box d-none">
-                <div class="col">
+                <div class="col">                    
                     <h2>My Listings</h2>
-                    <ul>
-                        {% if listing %}
-                        {% for listing in listings %}
-                        {% if listing.owner.user %}
-                        <li>{{ listing.owner.user.username }}</li>
-                        {% endif %}
+                    <ul>                        
+                        {% if owner.listings %}
+                        {% for listing in owner.listings %}
+                        <li>                            
+                            <img src="{{ listing.dog.photo.url }}" alt="{{ listing.dog.breed }} photo">
+                            <p>Breed: {{ listing.dog.breed }}</p>
+                            <p>Sex: {{ listing.dog.sex }}</p>
+                            <p>Date of Birth: {{ listing.dog.DOB }}</p>
+                            <p>Price: {{ listing.price }}</p>
+                            <p>Location: {{ listing.location }}</p>
+                            <p>Description: {{ listing.description }}</p>
+                        </li>
                         {% endfor %}
                         {% else %}
                         <li>No listings found.</li>
                         {% endif %}
-                    </ul>
+                     </ul> 
+                   
                     <div class="text-center mt-3">
                         <a href="{% url 'profile-update' %}" class="btn btn-primary text-white">Edit Listings</a>
                         <a href="{% url 'profile-delete' %}" class="btn btn-danger text-white">Delete Listings</a>
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div>            
         </div>
         <!-- ................................................ -->
         <!-- Right side: Profile Picture, Name, Email, Phone Number -->

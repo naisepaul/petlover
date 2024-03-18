@@ -81,7 +81,7 @@ Create Listings
 
 <div class="container">
     <h1>Add Dog Listing</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST"  action="{% url 'listing-form' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ dog_form.as_p }}
         {{ listing_form.as_p }}

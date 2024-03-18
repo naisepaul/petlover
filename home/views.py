@@ -106,8 +106,9 @@ def profile_delete(request):
 
 # dog listing page
 
-def listings_page(request):
-    return render(request,'listings/listings_page.html')
+def listings(request):
+    dogs = Dog.objects.prefetch_related('listing_set').all()  
+    return render(request,'listings/listings.html', {'dogs' : dogs})
 
 # create listings page
 
@@ -116,6 +117,7 @@ def listing_form(request):
     if request.method == 'POST':
         dog_form = DogListingForm(request.POST, request.FILES)
         listing_form = ListingForm(request.POST)
+        user_listings = Listing.objects.filter(owner=request.user)
         if dog_form.is_valid() and listing_form.is_valid():
             dog = dog_form.save(commit=False)
             dog.owner = request.user
@@ -131,5 +133,5 @@ def listing_form(request):
     else:
         dog_form = DogListingForm()
         listing_form = ListingForm()
-    return render(request, 'listings/listing_form.html', {'dog_form': dog_form, 'listing_form': listing_form})
+    return render(request, 'listings/listing_form.html', {'dog_form': dog_form, 'listing_form': listing_form, 'listings': user_listings})
     
