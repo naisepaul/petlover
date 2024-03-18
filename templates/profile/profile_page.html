@@ -17,7 +17,6 @@ My Profile
         max-width: 100%;
         height: auto;
     }
-
 </style>
 
 <div class="container mt-5">
@@ -26,20 +25,20 @@ My Profile
         <div class="col-lg-4 mb-3">
             <div class="profile-box ">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/profile-page/' %}active{% endif %}"
+                            aria-current="page" href="{% url 'profile-page' %}">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/my-listings/' %}active{% endif %}" aria-current="page"
+                            href="{% url 'my-listings' %}">My Listings</a>
+                    </li>
                     <!-- <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/profile-page/' %}active{% endif %}" aria-current="page"
-                          href="{% url 'profile-page' %}">My Profile</a>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/profile-page/' %}active{% endif %}" aria-current="page"
-                          href="{% url 'profile-page' %}">My Listings</a>                       
-                    </li> -->
-                    <li class="nav-item">
                         <a id="profile-link" class="nav-link active" href="#">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a id="listings-link" class="nav-link" href="#">My Listings</a>
-                    </li>
+                        <a id="listings-link" class="nav-link" href="listings/listings.html">My Listings</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -65,15 +64,17 @@ My Profile
                     </div>
                 </div>
             </div>
-            <div id="listings-section" class="profile-box d-none">
+
+
+            <!-- <div id="listings-section" class="profile-box d-none">
                 <div class="col">                    
                     <h2>My Listings</h2>
                     <ul>                        
-                        {% if owner.listings %}
-                        {% for listing in owner.listings %}
+                        {% if listings %}
+                        {% for listing in listings %}
                         <li>                            
                             <img src="{{ listing.dog.photo.url }}" alt="{{ listing.dog.breed }} photo">
-                            <p>Breed: {{ listing.dog.breed }}</p>
+                            <p>Breed: {{ owner.listing.breed }}</p>
                             <p>Sex: {{ listing.dog.sex }}</p>
                             <p>Date of Birth: {{ listing.dog.DOB }}</p>
                             <p>Price: {{ listing.price }}</p>
@@ -85,18 +86,18 @@ My Profile
                         <li>No listings found.</li>
                         {% endif %}
                      </ul> 
-                   
-                    <div class="text-center mt-3">
-                        <a href="{% url 'profile-update' %}" class="btn btn-primary text-white">Edit Listings</a>
-                        <a href="{% url 'profile-delete' %}" class="btn btn-danger text-white">Delete Listings</a>
-                    </div>
-                </div> 
-            </div>            
+                    -->
+            <!-- <div class="text-center mt-3">
+                <a href="{% url 'profile-update' %}" class="btn btn-primary text-white">Edit Listings</a>
+                <a href="{% url 'profile-delete' %}" class="btn btn-danger text-white">Delete Listings</a>
+            </div> -->
         </div>
-        <!-- ................................................ -->
-        <!-- Right side: Profile Picture, Name, Email, Phone Number -->
+    </div>
+</div>
+<!-- ................................................ -->
+<!-- Right side: Profile Picture, Name, Email, Phone Number -->
 
-        <!-- <div class="col-lg-8">
+<!-- <div class="col-lg-8">
             <div class="profile-box d-flex">
                 <div class="col-6">
                     <h2>My Profile</h2>
@@ -120,9 +121,9 @@ My Profile
                 </div>
             </div>
         </div> -->
-    </div>
-    <!-- Listing details section -->
-    <!-- <div class="row mt-5">
+
+<!-- Listing details section -->
+<!-- <div class="row mt-5">
         <div class="col">
             <h2>My Listings</h2>
             
@@ -134,6 +135,6 @@ My Profile
             </ul>
         </div>
     </div> -->
-</div>
+
 
 {% endblock body %}

@@ -135,3 +135,9 @@ def listing_form(request):
         listing_form = ListingForm()
     return render(request, 'listings/listing_form.html', {'dog_form': dog_form, 'listing_form': listing_form})
     
+@login_required
+def my_listings(request):    
+    user = request.user    
+    user_dogs = user.dog_set.all()
+    
+    return render(request, 'listings/my_listings.html', {'user': user, 'user_dogs': user_dogs})

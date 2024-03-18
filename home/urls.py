@@ -13,5 +13,5 @@ urlpatterns =[
     path('profile-delete/', views.profile_delete, name = 'profile-delete'),
     path('listings/listing-form/',views.listing_form, name = 'listing-form'),
     path('listings/listings/',views.listings, name = 'listings'),
-    
+    path('listings/my-listings/',views.my_listings, name = 'my-listings'),
 ]

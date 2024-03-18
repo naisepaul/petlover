@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-
+{% block title %}
+Home
+{% endblock title %}
 {% block body %}
-<div id="hero-image">
-   <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1708987636/hero-image_dlehwh.png" class="img-fluid"
-   alt="hero-image">
- </div>
+ 
+<section class="hero-section">
+    <div id="hero-image">
+        <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1708987636/hero-image_dlehwh.png" class="img-fluid"
+        alt="hero-image">
+      </div>      
+</section>
+
 {% endblock body %}
-<!-- {% block homeactive %}active{% endblock homeactive %} -->
+
