@@ -21,24 +21,29 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.username)
 
-class Dog(models.Model):
+class Dog(models.Model):   
+    
     breed = models.CharField(max_length=100, choices = choice.DOG_BREED)
     DOB = models.DateField()  # Date of Birth
     sex = models.CharField(max_length=1, choices=choice.SEX_CHOICES)
-    temperament = models.TextField(max_length=100, choices = choice.TEMPERAMENT)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='dogs_for_sale')
+    temperament = models.TextField(max_length=100, choices = choice.TEMPERAMENT)  
+    owner = models.ForeignKey(User, on_delete=models.CASCADE,null=True, blank=True)  
     photo = CloudinaryField('image')
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)       
 
     def __str__(self):
         return f"{self.breed} ({self.sex}), DOB: {self.DOB}"
 
 class Listing(models.Model):
+    
     dog = models.ForeignKey(Dog, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     location = models.CharField(max_length=100, choices=choice.COUNTIES)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-
+    owner = models.ForeignKey(User, on_delete=models.CASCADE,null=False)
+    # id = models.UUIDField(default=uuid.uuid4, unique=True,
+    #                       primary_key=True, editable=False)
+    
     def __str__(self):
-        return f"Listing for {self.dog.breed} - {self.location}"
+         return f"Listing for {self.dog.breed} - {self.location}"

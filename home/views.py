@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
-from .models import Profile
+from .models import Profile, Dog, Listing
 from .forms import ProfileForm, DogListingForm, ListingForm
 from . import choice
 
@@ -111,6 +111,7 @@ def listings_page(request):
 
 # create listings page
 
+@login_required
 def listing_form(request):
     if request.method == 'POST':
         dog_form = DogListingForm(request.POST, request.FILES)
@@ -121,9 +122,12 @@ def listing_form(request):
             dog.save()
             listing = listing_form.save(commit=False)
             listing.dog = dog
+            listing.owner = request.user
             listing.save()
             messages.success(request, 'Your listing has been created!')
             return redirect('/') 
+        else:            
+            messages.error(request, 'Form validation failed. Please correct the errors.')    
     else:
         dog_form = DogListingForm()
         listing_form = ListingForm()
