@@ -107,7 +107,7 @@ def profile_delete(request):
 # dog listing page
 
 def listings(request):
-    dogs = Dog.objects.prefetch_related('listing_set').all()  
+    dogs = Dog.objects.prefetch_related('listing_set').order_by('-created_at').all()  
     return render(request,'listings/listings.html', {'dogs' : dogs})
 
 # create listings page
