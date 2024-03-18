@@ -9,7 +9,6 @@ urlpatterns =[
     path('logout/', views.logoutconfirm, name = 'logoutconfirm'),     
     path('profile-page/', views.profile_page, name = 'profile-page'),   
     path('profile-update/', views.profile_update, name ='profile-update'),
-    # path('profile-delete/<int:pk>/', views.profile_delete, name='profile-delete'),
     path('profile-delete/', views.profile_delete, name = 'profile-delete'),
     path('listings/listing-form/',views.listing_form, name = 'listing-form'),
     path('listings/listings/',views.listings, name = 'listings'),
