@@ -90,5 +90,10 @@ body {
     
 }
 
+/*  listing card- image */
 
+.card-image {
+    height: 15rem;
+    object-fit: contain;
+}
 
