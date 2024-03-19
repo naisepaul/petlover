@@ -41,6 +41,17 @@ def signup(request):
         email = request.POST.get('email')        
         password = request.POST.get('password1')
         confirmpassword = request.POST.get('password2')
+        
+        # Check if password meets length requirement
+        if len(password) < 8:  
+            messages.warning(request, "Password should be at least 8 characters long")
+            return redirect('/signup')
+
+        # Check if username meets length requirement
+        if len(uname) < 5: 
+            messages.warning(request, "Username should be at least 5 characters long")
+            return redirect('/signup')
+
         if password != confirmpassword:
             messages.warning(request,"Password Incorrect")
             return redirect('/signup')
