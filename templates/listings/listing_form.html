@@ -2,11 +2,11 @@
 {% load static %}
 {% block title %}
 Create Listings
+
 {% endblock title %}
 
 {% block body %}
 <style>
-    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -50,14 +50,6 @@ Create Listings
     }
 
     button[type="submit"] {
-        /* background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;rgb(98, 148, 100)
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s; */
 
         background-color: #4CAF50;
         color: white;
@@ -87,6 +79,7 @@ Create Listings
         {{ listing_form.as_p }}
         <button type="submit">Submit</button>
     </form>
-</div>
+</div> 
+
 
 {% endblock body %}

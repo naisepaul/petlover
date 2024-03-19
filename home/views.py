@@ -138,6 +138,6 @@ def listing_form(request):
 @login_required
 def my_listings(request):    
     user = request.user    
-    user_dogs = user.dog_set.all()
-    
+    user_dogs = user.dog_set.all()    
     return render(request, 'listings/my_listings.html', {'user': user, 'user_dogs': user_dogs})
+
