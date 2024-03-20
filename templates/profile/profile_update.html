@@ -25,10 +25,11 @@ My Profile Update
 
     /* Style the profile picture */
     .profile-picture {
-        width: 170px;
-        height: 100px;
-        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        border-radius: 10%;
         margin-bottom: 10px;
+        object-fit: cover;
         /* Add space below the profile picture */
     }
 
@@ -90,7 +91,8 @@ My Profile Update
         <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture">
     {% endif %}
     <form method="post" action="{% url 'profile-update' %}" class="mt-3" enctype="multipart/form-data">
-        {% csrf_token %}              
+        {% csrf_token %}      
+        
         {{ form.as_p }}
         <div style="display: flex; justify-content: space-between;">
             <button type="submit">Save</button>

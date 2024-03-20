@@ -41,7 +41,7 @@ def signup(request):
         email = request.POST.get('email')        
         password = request.POST.get('password1')
         confirmpassword = request.POST.get('password2')
-        
+
         # Check if password meets length requirement
         if len(password) < 8:  
             messages.warning(request, "Password should be at least 8 characters long")
@@ -95,6 +95,13 @@ def profile_update(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
+            username = form.cleaned_data.get('username')
+            
+            # Check if username meets length requirement
+            if len(username) < 5:
+                messages.warning(request, "Username should be at least 5 characters long")
+                return redirect('/profile-update')   
+            
             form.save()
             messages.success(request,"Updated Successfully")
             return redirect('/profile-page')
@@ -107,8 +114,6 @@ def profile_delete(request):
     user = get_object_or_404(User, username=request.user.username)
     
     if request.method == 'POST':
-        # user = User.objects.get(username=request.user)
-        # If the user confirms the deletion
         user.delete()
         return redirect('/')  # Redirect to home
 
