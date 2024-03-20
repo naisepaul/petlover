@@ -132,8 +132,7 @@ def listings(request):
 def listing_form(request):
     if request.method == 'POST':
         dog_form = DogListingForm(request.POST, request.FILES)
-        listing_form = ListingForm(request.POST)
-        # user_listings = Listing.objects.filter(owner=request.user)
+        listing_form = ListingForm(request.POST)        
         if dog_form.is_valid() and listing_form.is_valid():
             dog = dog_form.save(commit=False)
             dog.owner = request.user
@@ -154,6 +153,6 @@ def listing_form(request):
 @login_required
 def my_listings(request):    
     user = request.user    
-    user_dogs = user.dog_set.all()    
+    user_dogs = user.dog_set.all()
     return render(request, 'listings/my_listings.html', {'user': user, 'user_dogs': user_dogs})
 

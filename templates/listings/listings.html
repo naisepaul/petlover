@@ -5,16 +5,15 @@ Listings
 
 {% block body %}
 
-
 <section class="results mt-5">
-    <div class="container text-center mt-5"">
+    <div class="container text-center mt-5">
         <h1>Recent Listings</h1>
         <div class="row mt-5 justify-content-center">          
             {% for dog in dogs %}
-            <div class="col-10 col-md-6 col-xl-4 mb-4">
-                <div class="card" style="width: 25rem; height: 26rem;">
-                    <h2 class="card-title text-truncate">{{ dog.breed|capfirst }} </h2>
-                    <div class="row py-2 ">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card">
+                    <h2 class="card-title text-truncate">{{ dog.breed|capfirst }}</h2>
+                    <div class="row py-2">
                         <div class="col-6">
                             <i class="fa-solid fa-dog"></i> {{ dog.breed |capfirst }}
                         </div>
@@ -22,10 +21,10 @@ Listings
                             <i class="fas fa-clock"></i> {{ dog.created_at|timesince }}
                         </div>
                     </div>
-                    <div  class="card" style="height: 15rem;"> <img src="{{ dog.photo.url }}" class="card-image"
-                            alt="{{  dog.breed }} image">
+                    <div class="card-image-container">
+                        <img src="{{ dog.photo.url }}" class="card-image img-fluid" alt="{{ dog.breed }} image">
                     </div>
-                    <div class="row py-2 ">
+                    <div class="row py-2">
                         <div class="col-6">
                             <i class="fa-solid fa-genderless"></i> {{ dog.temperament|capfirst }}
                         </div>
@@ -33,7 +32,6 @@ Listings
                             <i class="fa-regular fa-calendar-days"></i> {{ dog.DOB|capfirst }}
                         </div>
                     </div>
-                    
                     <a href="#" class="btn btn-primary">View Details</a>
                 </div>
             </div>
