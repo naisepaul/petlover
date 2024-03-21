@@ -17,6 +17,12 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
   - [Scope](#scope)
   - [User Stories](#user-stories)
 
+- [Credits](#credits)
+  - [Code](#code)
+  - [content](#content) 
+  - [Mockup](#mockup)
+  - [Images](#images-1)
+
 ## User Experience
 
 ### Website goal
@@ -79,6 +85,34 @@ Key Features:
 16. As a site owner I want to ensure that the user is prompted with a notification message when performing CRUD operations or login/logout, and signup so that the user is informed about the outcome of the action taken
 17. As a User I can navigate through the website so that I can access different sections efficiently
 18. As a non-authenticated user, I want to access the user profile pages of listing owners, so that I can view their contact details and listings.
+
+## Credits
+
+To complete this project I used Code institue student template: [Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
+ 
+- Ideas and knowledge library:
+  
+-  [AutoMarket](hhttps://github.com/Dayana-N/AutoMarket-PP4)
+
+- [stackoverflow.com](https://stackoverflow.com/)
+
+### Code
+
+- [Template Inheritance in Django](https://www.youtube.com/watch?v=gw-hKVt71A8)
+- [Image Upload to Cloudinary From Django](https://www.youtube.com/watch?v=i0ar7W98Osc)
+- [Host uploaded images from Django with Cloudinary](https://www.youtube.com/watch?v=fQo9ivqX4xs)
+
+### content
+
+- [AutoMarket](hhttps://github.com/Dayana-N/AutoMarket-PP4)
+
+### Mockup
+
+- [Mockup screenshot generator](https://ui.dev/amiresponsive)
+
+### Images
+
+- www.freepik.com
 
 
 
