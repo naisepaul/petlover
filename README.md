@@ -8,7 +8,7 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
 
 [You can see the live project here](https://petlover-6900a2845617.herokuapp.com/)
 
-![Responsive view]()
+![https://res.cloudinary.com/dmhdrvehj/image/upload/v1711016918/mock-up_rfmhf4.png]()
 
 ## [Table of Contents](#table-of-contents)
 
