@@ -92,7 +92,7 @@ To complete this project I used Code institue student template: [Gitpod full tem
  
 - Ideas and knowledge library:
   
--  [AutoMarket](hhttps://github.com/Dayana-N/AutoMarket-PP4)
+-  [AutoMarket](https://github.com/Dayana-N/AutoMarket-PP4)
 
 - [stackoverflow.com](https://stackoverflow.com/)
 
@@ -104,7 +104,7 @@ To complete this project I used Code institue student template: [Gitpod full tem
 
 ### content
 
-- [AutoMarket](hhttps://github.com/Dayana-N/AutoMarket-PP4)
+- [AutoMarket](https://github.com/Dayana-N/AutoMarket-PP4)
 
 ### Mockup
 
