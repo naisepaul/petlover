@@ -13,4 +13,5 @@ urlpatterns =[
     path('listings/listing-form/',views.listing_form, name = 'listing-form'),
     path('listings/listings/',views.listings, name = 'listings'),
     path('listings/my-listings/',views.my_listings, name = 'my-listings'),
+    path('listings/listings/<int:id>/', views.single_listing, name='single-listing'),
 ]

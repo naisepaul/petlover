@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page"
+              <a class="nav-link {% if request.path == ' ' %}active{% endif %}" aria-current="page"
                 href="{% url 'home' %}">Home</a>
             </li>
             
@@ -75,9 +75,9 @@
   {% endfor %}
 
 
-  {% block body %}
+  {% block content %}
 
-  {% endblock body%}
+  {% endblock content%}
   <!-- Footer -->
   <footer class="text-center text-lg-start" id="footer">
     <div class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">

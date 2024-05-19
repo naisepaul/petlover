@@ -4,36 +4,38 @@
 Listings
 {% endblock title %}
 
-{% block body %}
+{% block content %}
 
 <section class="results mt-5">
     <div class="container text-center mt-5">
-        <h1>Recent Listings</h1>
+        <h1>Listings</h1>
         <div class="row mt-5 justify-content-center">          
-            {% for dog in dogs %}
+            {% for listing in listings %}
             <div class="col-12 col-sm-6 col-md-4 mb-4">
                 <div class="card">
-                    <h2 class="card-title text-truncate">{{ dog.breed|capfirst }}</h2>
+                    <h2 class="card-title text-truncate">{{ listing.dog.breed|capfirst }}</h2>
                     <div class="row py-2">
                         <div class="col-6">
-                            <i class="fa-solid fa-dog"></i> {{ dog.breed |capfirst }}
+                            <i class="fas fa-map-marker"></i> {{ listing.location |capfirst }}
                         </div>
                         <div class="col-6">
-                            <i class="fas fa-clock"></i> {{ dog.created_at|timesince }}
+                            <i class="fas fa-clock"></i> {{ listing.dog.created_at|timesince }}
                         </div>
                     </div>
                     <div class="card-image-container">
-                        <img src="{{ dog.photo.url }}" class="card-image img-fluid" alt="{{ dog.breed }} image">
+                        <a href="{% url 'single-listing' listing.id %}" class="card-link">
+                        <img src="{{ listing.dog.photo.url }}" class="card-image img-fluid" alt="{{ dog.breed }} image"></a>
                     </div>
                     <div class="row py-2">
                         <div class="col-6">
-                            <i class="fa-solid fa-genderless"></i> {{ dog.temperament|capfirst }}
+                            <i class="fa-solid fa-genderless"></i> {{ listing.dog.temperament|capfirst }}
                         </div>
                         <div class="col-6">
-                            <i class="fa-regular fa-calendar-days"></i> {{ dog.DOB|capfirst }}
-                        </div>
+                            <i class="fa-regular fa-calendar-days"></i> {{ listing.dog.DOB|capfirst }}
+                        </div>                        
                     </div>
-                    <a href="#" class="btn btn-primary">View Details</a>
+                    <h3>Price: €{{ listing.price}}</h3>
+                    <a href="{% url 'single-listing' listing.id %}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
             {% endfor %}
@@ -41,4 +43,4 @@ Listings
     </div>    
 </section>
 
-{% endblock body %}
+{% endblock content %}

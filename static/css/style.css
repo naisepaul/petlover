@@ -94,7 +94,7 @@ body {
 
 .card-image-container {
     width: 100%;
-    height: 300px; 
+    height: 200px; 
     overflow: hidden; /* Hide any overflow */
     position: relative;
 }
@@ -102,11 +102,33 @@ body {
 .card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
     position: absolute;
+    object-fit: contain;
     top: 0;
     left: 0;
 }
+
+/* Styles for single listings */
+
+#listing img {
+    width: 100%;    
+    height: auto;  
+    max-height: 300px;     
+    object-fit: contain;    
+}
+
+    .container-photo {
+        max-width: 800px;              
+}
+
+    .btn.blue {
+        background-color: #007bff; 
+}
+
+    .btn.blue:hover {
+        background-color: #0056b3; 
+}
+
 
 
 

@@ -123,8 +123,17 @@ def profile_delete(request):
 # dog listing page
 
 def listings(request):
-    dogs = Dog.objects.prefetch_related('listing_set').order_by('-created_at').all()  
-    return render(request,'listings/listings.html', {'dogs' : dogs})
+    listings = Listing.objects.select_related('dog').order_by('-created_at').all()
+    return render(request, 'listings/listings.html', {'listings': listings})
+
+# single listing page
+
+def single_listing(request, id):
+    """ view single listings """
+   
+    listings = get_object_or_404(Listing, id=id)
+    return render(request, 'listings/single_listing.html', {'listings': listings})
+
 
 # create listings page
 
@@ -155,4 +164,7 @@ def my_listings(request):
     user = request.user    
     user_dogs = user.dog_set.all()
     return render(request, 'listings/my_listings.html', {'user': user, 'user_dogs': user_dogs})
+    
+
+
 
