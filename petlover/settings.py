@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
+
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -30,12 +31,12 @@ TEMPLATES_DIR =  os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-
-ALLOWED_HOSTS = ['8000-naisepaul-petloverproje-vjvcfgded7a.ws-eu110.gitpod.io'
-                ,'.herokuapp.com']
-
+ALLOWED_HOSTS = ['8000-naisepaul-petloverproje-gjihbkhu3ge.ws-eu114.gitpod.io'
+                ,'https://petlover-6900a2845617.herokuapp.com/']
+            
+CSRF_TRUSTED_ORIGINS =['8000-naisepaul-petloverproje-gjihbkhu3ge.ws-eu114.gitpod.io', 'https://petlover-6900a2845617.herokuapp.com/']
 
 # Application definition
 

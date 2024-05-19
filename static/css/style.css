@@ -8,7 +8,6 @@
 
 body {
     background-color: rgb(154, 179, 209);
-
 }
 
 /* Body background-image  details */
@@ -61,7 +60,7 @@ body {
 .card {
     border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(187, 11, 11, 0.1);    
 }
 
 .card-header {
@@ -88,6 +87,24 @@ body {
 .custom-body {
     background-color: #658665;
     
+}
+
+/* styles for photo card */
+
+.card-image-container {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden; /* Hide any overflow */
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
