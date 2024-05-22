@@ -8,6 +8,7 @@ from .models import Profile, Dog, Listing
 from .forms import ProfileForm, DogListingForm, ListingForm
 from . import choice
 
+
 # Create your views here.
 
 # Home page
@@ -132,8 +133,8 @@ def single_listing(request, id):
     """ view single listings """
    
     listings = get_object_or_404(Listing, id=id)
-    return render(request, 'listings/single_listing.html', {'listings': listings})
-
+    owner_profile = Profile.objects.get(user= listings.owner)
+    return render(request, 'listings/single_listing.html', {'listings': listings,'owner_profile': owner_profile})
 
 # create listings page
 

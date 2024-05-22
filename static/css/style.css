@@ -117,15 +117,11 @@ body {
     object-fit: contain;    
 }
 
-    .container-photo {
-        max-width: 800px;              
-}
-
-    .btn.blue {
+.btn.blue {
         background-color: #007bff; 
 }
 
-    .btn.blue:hover {
+.btn.blue:hover {
         background-color: #0056b3; 
 }
 

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-{{ listing.listing_title}}
+{{ listings.dog.breed }}
 {% endblock title %}
 
 {% block content %}
@@ -11,27 +11,37 @@
         <button class="btn blue text-white mb-4" onclick="history.back()">Go Back</button>
         <div class="container-photo">
             <div class="row">
-                <div class="col-12 col-lg-7">
+                <div class="col-12 col-md-12 col-lg-4">
                     <div class="container-photo">
                         <img src="{{ listings.dog.photo.url }}" class="img-fluid" alt="{{ dog.breed }} image">
                     </div>
                 </div>
-                <div class="col-12 col-md-10 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="row">
-                        <div class="col-12">
-                            <h2>{{ listings.dog.breed|capfirst }}</h2>
-                            <h4>DOB: {{ listings.dog.DOB|date:"F j, Y"  }}</h4>
+                        <div class="col-12">                            
+                            <p><strong>DOB:</strong> {{ listings.dog.DOB|date:"F j, Y"  }}</p>
                             <p><strong>Breed:</strong> {{ listings.dog.breed|capfirst }}</p>
                             <p><strong>Location: €</strong> {{ listings.location|capfirst }}</p>
                             <p><strong>Posted:</strong> {{ listings.dog.created_at|timesince }}</p>
                             <p><strong>Temperament:</strong> {{ listings.dog.temperament|capfirst }}</p>
                             <p><strong>Price: €</strong> {{ listings.price|capfirst }}</p>
+                            <p><strong>Description: €</strong> {{ listings.description|capfirst }}</p>
                         </div>
+                        
+                    </div>                                      
+                </div>  
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="seller-details">
+                        <h3> Contact</h3>
+                        <img src="{{ owner_profile.profile_image.url }}" class="img-fluid rounded-circle mb-7"
+                            alt="{{ user.name }} profile picture" style="width: 150px; height: 150px; object-fit: cover;">
+                        <p><strong>Name: </strong>{{ owner_profile.name }}</p>
+                        <p><strong>Email:</strong> <a href="mailto:{{ listings.owner.email }}">{{ listings.owner.email }}</a></p>
+                        <p><strong>Phone:</strong> {{ owner_profile.phone }}</a></p>
                     </div>
-                </div>
+                </div>              
             </div>            
         </div>
-
     </div>
 </section>
 

@@ -38,3 +38,4 @@ class ListingForm(forms.ModelForm):
     class Meta:
         model = Listing
         fields = ['price', 'location', 'description']
+
