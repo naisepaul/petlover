@@ -39,7 +39,7 @@ My Profile
         <div class="col-lg-8">
             <div id="profile-section" class="profile-box d-flex">
                 <div class="col-6">
-                    <h2>My Profile</h2>
+                    <h2>{{ user.profile.name |capfirst }}'s Profile</h2>
                     <div class="profile-picture-container">
                         <img src="{{ user.profile.profile_image.url }}" class="profile-picture rounded-circle"
                             alt="Profile Picture" style="width: 220px; height: 220px; object-fit: cover;">
