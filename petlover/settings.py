@@ -34,9 +34,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-naisepaul-petloverproje-gjihbkhu3ge.ws-eu114.gitpod.io'
-                ,'petlover-6900a2845617.herokuapp.com/']
+                ,'petlover-6900a2845617.herokuapp.com']
             
-CSRF_TRUSTED_ORIGINS =['8000-naisepaul-petloverproje-gjihbkhu3ge.ws-eu114.gitpod.io', 'https://petlover-6900a2845617.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS =['8000-naisepaul-petloverproje-gjihbkhu3ge.ws-eu114.gitpod.io', 'https://petlover-6900a2845617.herokuapp.com']
 
 # Application definition
 

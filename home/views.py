@@ -14,8 +14,9 @@ from . import choice
 # Home page
 
 def index(request):
-    return render(request,'index.html')
-
+    recent_listings = Listing.objects.order_by('-created_at')[:6]
+    return render(request, 'index.html', {'recent_listings': recent_listings})
+    
 # user login page
 
 def login_account(request):
