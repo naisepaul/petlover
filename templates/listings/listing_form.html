@@ -73,13 +73,24 @@ Create Listings
 
 <div class="container">
     <h1>Add Dog Listing</h1>
-    <form method="POST"  action="{% url 'listing-form' %}" enctype="multipart/form-data">
+    <form method="POST"  action="{% url 'listing-form' %}" enctype="multipart/form-data">        
         {% csrf_token %}
         {{ dog_form.as_p }}
         {{ listing_form.as_p }}
         <button type="submit">Submit</button>
     </form>
 </div> 
-
+<script>
+    $(function() {
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            minDate: new Date(2020, 0, 1), 
+            maxDate: new Date(),  
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '2020:2100',  
+        });
+    });
+</script>
 
 {% endblock content %}

@@ -98,8 +98,7 @@ My Profile Update
         <img src="{{ user.profile.profile_image.url }}" alt="Profile Picture" class="profile-picture mt-2">
     {% endif %}
     <form method="post" action="{% url 'profile-update' %}" class="mt-4" enctype="multipart/form-data">
-        {% csrf_token %}      
-        
+        {% csrf_token %}              
         {{ form.as_p }}
         <div style="display: flex; justify-content: space-between;">
             <button type="submit">Save</button>

@@ -30,6 +30,11 @@ class ProfileForm(forms.ModelForm):
 # Dog Listing Form
 
 class DogListingForm(forms.ModelForm):
+    DOB = forms.DateField(widget=forms.DateInput(attrs={
+        'class': 'datepicker', 
+        'type': 'date'
+       }))
+    
     class Meta:
         model = Dog
         fields = ['breed', 'DOB', 'sex', 'temperament', 'photo']
