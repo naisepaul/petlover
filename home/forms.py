@@ -35,6 +35,10 @@ class DogListingForm(forms.ModelForm):
         fields = ['breed', 'DOB', 'sex', 'temperament', 'photo']
 
 class ListingForm(forms.ModelForm):
+    PRICE_CHOICES = [(i, f"€{i}") for i in range(100, 1050, 50)]
+    price = forms.ChoiceField(choices=PRICE_CHOICES, widget=forms.Select(attrs={
+        'class': 'price-selector'
+    }))
     class Meta:
         model = Listing
         fields = ['price', 'location', 'description']
