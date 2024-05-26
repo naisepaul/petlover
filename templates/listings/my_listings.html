@@ -10,45 +10,48 @@ My Profile
     <div class="container text-center mt-0">   
         <h1>Recent Listings for {{ user.profile.name |capfirst }}</h1>
         <div class="row mt-5 justify-content-center">
-            {% if user_dogs %}
-            {% for dog in user.dog_set.all %}        
-            <div class="col-10 col-md-6 col-xl-4 mb-4">
-                <div class="card">
-                    <h2 class="card-title text-truncate">{{ dog.breed|capfirst }} </h2>
-                    <div class="row py-2 ">
-                        <div class="col-6">
-                            <i class="fa-solid fa-dog"></i> {{ dog.breed |capfirst }}
+            {% if listings %} 
+            {% for listing in listings %}
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <h2 class="card-title text-truncate">{{ listing.dog.breed|capfirst }}</h2>
+                        <div class="row py-2">
+                            <div class="col-6">
+                                <i class="fas fa-map-marker"></i> {{ listing.location |capfirst }}
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-clock"></i> {{ listing.dog.created_at|timesince }}
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <i class="fas fa-clock"></i> {{ dog.created_at|timesince }}
+                        <div class="card-image-container">
+                            <a href="{% url 'single-listing' listing.id %}" class="card-link">
+                            <img src="{{ listing.dog.photo.url }}" class="card-image img-fluid" alt="{{ dog.breed }} image"></a>
                         </div>
-                    </div>
-                    <div class="card" style="height: 15rem;">
-                        <img src="{{ dog.photo.url }}" class="card-image" alt="{{ dog.breed }} image">
-                    </div>
-                    <div class="row py-2 ">
-                        <div class="col-6">
-                            <i class="fa-solid fa-genderless"></i> {{ dog.temperament|capfirst }}
+                        <div class="row py-2">
+                            <div class="col-6">
+                                <i class="fa-solid fa-genderless"></i> {{ listing.dog.temperament|capfirst }}
+                            </div>
+                            <div class="col-6">
+                                <i class="fa-regular fa-calendar-days"></i> {{ listing.dog.DOB|capfirst }}
+                            </div>                        
                         </div>
-                        <div class="col-6">
-                            <i class="fa-regular fa-calendar-days"></i> {{ dog.DOB|capfirst }}
-                        </div>
-                    </div>
-                    <div class="text-center mb-1">
-                        <a href="{% url 'single-listing' dog.id %}" class="btn btn-primary">View </a>
-                        <a href="#" class="btn btn-primary">Edit </a>
-                        <a href="#" class="btn btn-danger ">Delete </a>
-                    </div>
-                </div>
-            </div>        
+                        <h3>Price: €{{ listing.price}}</h3>
+                        <div class="text-center mb-1">                                             
+                            <a href="{% url 'single-listing' listing.id %}" class="btn btn-primary">View </a>
+                            <a href="#" class="btn btn-primary">Edit </a>
+                            <a href="{% url 'listing-delete' listing.id %}" class="btn btn-danger ">Delete </a>
+                            
+                        </div>                         
+                    </div>                
+                </div>           
             {% endfor %}
             {% else %}
-            <div class="col-12">
-                <h2>No listings available.</h2>
-            </div>
+                <div class="col-12">
+                    <h2>No listings available.</h2>
+                </div>
             {% endif %}
         </div>
     </div>
-</div>
+</div>    
 
 {% endblock content %}

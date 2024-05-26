@@ -161,11 +161,29 @@ def listing_form(request):
     return render(request, 'listings/listing_form.html', {'dog_form': dog_form, 'listing_form': listing_form})
     
 @login_required
-def my_listings(request):    
+def my_listings(request):
+    '''
+    A view that handles my listings
+    ''' 
     user = request.user    
-    user_dogs = user.dog_set.all()
-    return render(request, 'listings/my_listings.html', {'user': user, 'user_dogs': user_dogs})
-    
+    listings = user.listing_set.all()
+    return render(request, 'listings/my_listings.html', {'user': user, 'listings': listings})
+        
+@login_required
+def listing_delete(request, id):
+    '''
+    A view that handles deleting listings
+    '''
+    listing = get_object_or_404(Listing, id=id)
+    dog = listing.dog
+    if request.method == 'POST':
+        dog.delete()
+        messages.success(request, 'Listing deleted successfully.')
+        return redirect('/my-listings')
 
+    context = {
+        'listing': listing,
+    }
+    return render(request, 'listings/listing_delete.html', context)
 
 

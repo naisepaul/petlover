@@ -21,8 +21,7 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.username)
 
-class Dog(models.Model):   
-    
+class Dog(models.Model):  
     breed = models.CharField(max_length=100, choices = choice.DOG_BREED)
     DOB = models.DateField()  # Date of Birth
     sex = models.CharField(max_length=1, choices=choice.SEX_CHOICES)
@@ -42,6 +41,6 @@ class Listing(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE,null=False)
-        
+       
     def __str__(self):
          return f"Listing for {self.dog.breed} - {self.location}"

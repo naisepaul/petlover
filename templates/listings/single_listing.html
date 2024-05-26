@@ -34,10 +34,10 @@
                     <div class="seller-details">
                         <h3> Contact</h3>
                        
-                        <a href="{% url 'profile-page'  %}">                    
+                        <!-- <a href="{% url 'profile-page'  %}">                     -->
                             <img src="{{ owner_profile.profile_image.url }}" class="img-fluid rounded-circle mb-7"
                             alt="{{ user.name }} profile picture" style="width: 150px; height: 150px; object-fit: cover;">
-                        </a>
+                        <!-- </a> -->
                         <p><strong>Name: </strong>{{ owner_profile.name }}</p>
                         <p><strong>Email:</strong> {{ listings.owner.email }}</a></p>
                         <p><strong>Phone:</strong> {{ owner_profile.phone }}</a></p>
@@ -46,7 +46,5 @@
             </div>            
         </div>
     </div>
-</section>
-
-    
+</section>    
 {% endblock content%}
