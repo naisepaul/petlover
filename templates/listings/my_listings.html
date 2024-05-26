@@ -38,7 +38,7 @@ My Profile
                         <h3>Price: €{{ listing.price}}</h3>
                         <div class="text-center mb-1">                                             
                             <a href="{% url 'single-listing' listing.id %}" class="btn btn-primary">View </a>
-                            <a href="#" class="btn btn-primary">Edit </a>
+                            <a href="{% url 'listing-edit' id=listing.id %}" class="btn btn-primary">Edit </a>
                             <a href="{% url 'listing-delete' listing.id %}" class="btn btn-danger ">Delete </a>
                             
                         </div>                         

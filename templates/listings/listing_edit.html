@@ -6,8 +6,9 @@ Create Listings
 {% endblock title %}
 
 {% block content %}
+
 <style>
-    .container {
+    .form-container {
         max-width: 600px;
         margin: 20px auto;
         padding: 20px;
@@ -43,8 +44,8 @@ Create Listings
         box-sizing: border-box;
     }
 
-    button[type="submit"] {
-
+    .form-container button[type=submit],
+    .form-container a.btn {
         background-color: #4CAF50;
         color: white;
         padding: 14px 20px;
@@ -60,31 +61,22 @@ Create Listings
         transition: background-color 0.3s;
     }
 
-    button[type="submit"]:hover {
+    .form-container button[type="submit"]:hover
+    .form-container a.btn:hover {
         background-color: #45a049;
     }
 </style>
 
-<div class="container">
-    <h1>Add Dog Listing</h1>
-    <form method="POST"  action="{% url 'listing-form' %}" enctype="multipart/form-data">        
-        {% csrf_token %}
-        {{ dog_form.as_p }}
-        {{ listing_form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
-</div> 
-<script>
-    $(function() {
-        $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd',
-            minDate: new Date(2020, 0, 1), 
-            maxDate: new Date(),  
-            changeMonth: true,
-            changeYear: true,
-            yearRange: '2020:2100',  
-        });
-    });
-</script>
-
+<div class="form-container">
+    <h2>Edit Listing</h2>
+    <form method="post" action="{% url 'listing-edit' listing.id %}" enctype="multipart/form-data">
+        {% csrf_token %}       
+        {{ dog_form.as_p }}   
+        {{ listing_form.as_p }}        
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit">Save</button>
+            <a href="{% url 'my-listings' %}" class="btn btn-primary">Go Back</a>
+        </div>
+    </form>   
+</div>
 {% endblock content %}

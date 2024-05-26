@@ -48,3 +48,4 @@ class ListingForm(forms.ModelForm):
         model = Listing
         fields = ['price', 'location', 'description']
 
+    

@@ -186,4 +186,25 @@ def listing_delete(request, id):
     }
     return render(request, 'listings/listing_delete.html', context)
 
-
+@login_required
+def listing_edit(request, id):
+    '''
+    A view that handles editing listings
+    '''
+    listing = get_object_or_404(Listing, id=id)
+    # profile = Profile.objects.get(user= listing.dog)
+    
+    dog = listing.dog
+    
+    if request.method == 'POST':
+        listing_form = ListingForm(request.POST, instance=listing)
+        dog_form = DogListingForm(request.POST, request.FILES, instance=dog)
+        if listing_form.is_valid() and dog_form.is_valid():
+            listing_form.save()
+            dog_form.save()
+            return redirect('/my-listings' )  
+    else:
+        listing_form = ListingForm(instance=listing)
+        dog_form = DogListingForm(instance=dog)    
+         
+    return render(request, 'listings/listing_edit.html', {'listing_form': listing_form, 'dog_form': dog_form, 'listing': listing})
