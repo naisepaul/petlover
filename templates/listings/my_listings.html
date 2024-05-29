@@ -6,7 +6,7 @@ My Profile
 
 {% block content %}
 <div class="container">
-    <button class="btn blue text-white mt-4 " style="margin-left: 2.5rem;" onclick="history.back()">Go Back</button>
+    <a href="{% url 'profile-page' %}" class="btn blue text-white mt-4 " style="margin-left: 2.5rem;">Go Back</a>    
     <div class="container text-center mt-0">   
         <h1>Recent Listings for {{ user.profile.name |capfirst }}</h1>
         <div class="row mt-5 justify-content-center">
@@ -38,7 +38,7 @@ My Profile
                         <h3>Price: €{{ listing.price}}</h3>
                         <div class="text-center mb-1">                                             
                             <a href="{% url 'single-listing' listing.id %}" class="btn btn-primary">View </a>
-                            <a href="{% url 'listing-edit' id=listing.id %}" class="btn btn-primary">Edit </a>
+                            <a href="{% url 'listing-edit' listing.id %}" class="btn btn-primary">Edit </a>
                             <a href="{% url 'listing-delete' listing.id %}" class="btn btn-danger ">Delete </a>
                             
                         </div>                         
