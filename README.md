@@ -16,6 +16,17 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
   - [Website goal](#website-goal)
   - [Scope](#scope)
   - [User Stories](#user-stories)
+- [Design](#design)
+  - [Color Scheme](#color-scheme)
+  - [Database Schema](#database-schema)
+  - [Fonts](#fonts)
+  - [Wireframes](#wireframes)
+  - [Agile Methodology](#agile-methodology)
+    - [Overview](#overview)
+    - [EPICS(Milestones)](#epics(milestones))
+    - [User Stories issues](#user-stories-issues)
+    - [MoSCoW prioritization](#moscow-prioritization)
+    - [GitHub Projects](#github-projects)
 
 - [Credits](#credits)
   - [Code](#code)
@@ -85,6 +96,41 @@ Key Features:
 16. As a site owner I want to ensure that the user is prompted with a notification message when performing CRUD operations or login/logout, and signup so that the user is informed about the outcome of the action taken
 17. As a User I can navigate through the website so that I can access different sections efficiently
 18. As a non-authenticated user, I want to access the user profile pages of listing owners, so that I can view their contact details and listings.
+
+[Back to Table of contents](#table-of-contents)
+
+## Design
+
+### Colour Scheme
+In this website mainly used grey back ground. For login,sign up forms and buttons used light blue colors. For  container used white color, inside this container added picture.
+
+The below colours are the main colours.
+-  body background-color - rgb(154, 179, 209)
+-  nav-bar hover - yellow
+-  nav bar, button, card header - #007bff
+-  button hover -  #0056b3
+-  footer -  #f8f9fa
+-  button back ground -   #4CAF50
+-  button color- white
+
+### Database Schema
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717021191/dbdaigram_oqfvlj.png)
+
+1. User:  The User model is connected to the UserProfile model with one to one relationship.
+
+2. UserProfile: The UserProfile model is a created model to handle the user profile details. 
+
+3. Dog: This model was created to store all of the dog details in the database
+
+4. Listing: The listing model is connected to the Profile with the ForeignKey field - owner and dog. 
+
+### Fonts
+
+In addition to Bootstrap 4 built in font family the below two fonts were used throughout the application
+
+- Poppins
+- Indie Flower
 
 ## Credits
 
