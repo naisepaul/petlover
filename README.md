@@ -132,6 +132,39 @@ In addition to Bootstrap 4 built in font family the below two fonts were used th
 - Poppins
 - Indie Flower
 
+### Wireframes
+
+- Home
+<details>
+  <summary>Home</summary> 
+    <img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717107163/wireframe-home_axuuoi.png">   
+</details>
+
+- Listings
+<details>
+  <summary>Listings</summary> 
+  <img src ="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717107163/wireframe-listings_il26gc.png">
+</details>
+
+- Single Listing
+<details>
+  <summary>Single Listing</summary> 
+  <img src ="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717107163/wireframe-Single-listings_j3c5ph.png">
+</details>
+
+- My Listings
+<details>
+  <summary>My Listing</summary> 
+  <img src ="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717107163/wireframe-my-listings_watjbl.png">
+</details>
+
+- My Profile
+<details>
+  <summary>My Profile</summary> 
+  <img src ="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717107163/wireframe-my-profile_fxudsa.png">
+</details>
+
+
 ## Credits
 
 To complete this project I used Code institue student template: [Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
