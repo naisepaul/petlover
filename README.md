@@ -261,6 +261,24 @@ The listings page consists all the listings starting from the most recent ones.
 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717228046/listings_gkggn4.png)
 
+#### Create Listing
+
+This page can be accessed only by authenticated users. It provides the user with a listing creation form.  The model field is then populated with the appropriate options based on the dog breed, sex and temperament selection. Price selection is from 100 to 1000 for range of 50. This helps to prevent users from creating listings with wrong details. All fields are required. 
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230200/create-listings_rxklqv.png)
+
+### Profile Page
+
+This page can be accessed only by authenticated users. It consists of a sidebar menu with links for Profile and My Listings. The profile page is essentially a large card that includes the user's profile image and details like name, user name, email, and phone. Underneath, there are two buttons one for edit profile and one for delete profile.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230458/my-profile_ic18io.png)
+
+#### My listings
+
+This page shows all of the listings that were created by this user. The cards have additional buttons for viewing,editing and deleting listings which allows each user to easily manage their listings. And there is a back  button to go back to my profile. 
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230674/my-listings_eb1l2q.png)
+
 ## Credits
 
 To complete this project I used Code institue student template: [Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
