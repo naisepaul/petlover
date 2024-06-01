@@ -193,8 +193,7 @@ def listing_edit(request, id):
     A view that handles editing listings
     '''
     listing = get_object_or_404(Listing, id=id)
-    # profile = Profile.objects.get(user= listing.dog)
-    
+        
     dog = listing.dog
     
     if request.method == 'POST':

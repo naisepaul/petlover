@@ -48,6 +48,8 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
     - [Edit Profile](#edit-profile)
     - [Delete Profile Confirmation](#delete-profile-confirmation)
 
+- [Future Features](#future-features)
+- [Testing](#testing)
 - [Credits](#credits)
   - [Code](#code)
   - [content](#content) 
@@ -327,6 +329,15 @@ This page consists of warning message with two buttons - one to go back and one 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717260510/delete-profile_lmz8tj.png)
 
 [Back to Table of contents](#table-of-contents)
+
+## Future Features
+
+1. I want to add pagination to the listings and my listing page.
+
+2. Add favourites if some one likes the listings.
+
+3. Password reset
+
 
 ## Credits
 
