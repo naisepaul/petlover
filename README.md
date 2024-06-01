@@ -28,6 +28,27 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
     - [MoSCoW prioritization](#moscow-prioritization)
     - [GitHub Projects](#github-projects)
 
+- [Features](#features)
+    - [Navbar](#navbar)
+    - [Footer](#footer)
+    - [Home](#home)
+        - [Hero Section](#hero-section)
+        - [Recent Listings](#recent-listings)
+        - [Listing Card](#listing-card)
+    - [Listings Page](#listings-page)
+    - [Create Listing](#create-listing)
+    - [Profile Page](#profile-page)
+    - [My Listings](#my-listings)
+    - [Edit Listing](#edit-listing)
+    - [Delete Listing](#delete-listing)
+    - [View Listing](#view-listing)
+    - [User account and User account listings](#user-account-and-user-account-listings)
+    - [Sign In Page](#sign-in-page)
+    - [Sign Up Page](#sign-up-page)
+    - [Sign Out Confirmation](#sign-out-confirmation)
+    - [Edit Profile](#edit-profile)
+    - [Delete Profile Confirmation](#delete-profile-confirmation)
+
 - [Credits](#credits)
   - [Code](#code)
   - [content](#content) 
@@ -193,6 +214,52 @@ This prioritization technique was used to effectively prioritize the features an
 The project was created using a basic Kanban Board structure, divided into columns such as Todo, In Progress, Done, and Backlog. This setup provides a clear and organized way to track the status of tasks and visualize and manage the workflow.
 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717108600/kamban-board_zprqvc.png)
+
+## Features
+
+### Navbar
+
+The navbar was built using bootstrap 5 and it is fully responsive. When the user clicks login/signup the log in form will come and if user has no account they sign up using register here form. If the user is authenticated additional menu options are displayed like my profile and create listing.  The my profile links shows registered user profile and thier listings also
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717224504/navbar2_pkzvrp.png)
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717224503/navbar_xn4nwe.png)
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717224504/navbar1_kzndea.png)
+
+### Footer
+
+The footer consist of links to social media links and address.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717225012/footer_n7r2e8.png)
+
+### Home
+
+#### Hero Section
+
+The hero section is the beginning of the whole customer's journey. That is why I made it a priority to create appealing hero section. 
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717225012/Hero-section_phnzjq.png)
+
+#### Recent Listings
+
+The products displayed on the home page are the most recently added 6 Listings.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717225317/recent-listings_povy8e.png)
+
+#### Listing Card
+
+The listing card is designed to present to the user the most important information about the listing. The card consists of a breed, location, time ago posted, DOB, temperament, price and a button for view details. The card and the button are links to the single listing page.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717228332/listing-card_xyuwkn.png)
+
+[Back to Table of contents](#table-of-contents)
+
+### Listings Page
+
+The listings page consists all the listings starting from the most recent ones.  
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717228046/listings_gkggn4.png)
 
 ## Credits
 
