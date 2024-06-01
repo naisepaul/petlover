@@ -42,7 +42,6 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
     - [Edit Listing](#edit-listing)
     - [Delete Listing](#delete-listing)
     - [View Listing](#view-listing)
-    - [User account and User account listings](#user-account-and-user-account-listings)
     - [Sign In Page](#sign-in-page)
     - [Sign Up Page](#sign-up-page)
     - [Sign Out Confirmation](#sign-out-confirmation)
@@ -261,7 +260,7 @@ The listings page consists all the listings starting from the most recent ones.
 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717228046/listings_gkggn4.png)
 
-#### Create Listing
+### Create Listing
 
 This page can be accessed only by authenticated users. It provides the user with a listing creation form.  The model field is then populated with the appropriate options based on the dog breed, sex and temperament selection. Price selection is from 100 to 1000 for range of 50. This helps to prevent users from creating listings with wrong details. All fields are required. 
 
@@ -273,11 +272,61 @@ This page can be accessed only by authenticated users. It consists of a sidebar 
 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230458/my-profile_ic18io.png)
 
-#### My listings
+### My listings
 
 This page shows all of the listings that were created by this user. The cards have additional buttons for viewing,editing and deleting listings which allows each user to easily manage their listings. And there is a back  button to go back to my profile. 
 
 ![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230674/my-listings_eb1l2q.png)
+
+### Edit Listing
+
+This page displays the same form as create a listing, with already populated fields with the current details of the listing. The user can amend all of the details on the page and upload new images or just save the form as it is. Once submitted the user is redirected to my listings page.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717258435/edit-listing_sv9zmh.png)
+
+### Delete Listing
+
+When the user visits my listings page they can delete listings using the delete button on each card, which redirects the user to confirmation page. The page consists of a warning message and two buttons - one to go back and one to delete listing, which is in red colour to clearly indicate danger. Once the user confirms, the listing is deleted. The user is then redirected to my listings page.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717258733/delete-listing_ovd9rr.png)
+
+### View Listing
+
+This button leads to the single listing page. On the top left, there is a button to go back. In this page left side displays the picture, middle displays dogs details and right side displays contact details of this listing.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259554/single-listing_pctxzi.png)
+
+### Log In page
+
+Consist of a form with username and password.A log in button which submits the form. The register link is position below that.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259980/log-in_ydtyfo.png)
+
+### Sign Up page
+
+Consists of a form with name, email, username, password, and password confirmation. Below it has a link to log in if the user already has an account. Below that is the signup button. 
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259980/sign-up_eqiofx.png)
+
+### Sign out confirmation
+
+When the user clicks on the log out link in the nav, they are redirected to the confirmation page. This page consist of warning message and two buttons- one to go back to home and one to log out.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717260187/Signout-confirmation_etwkq8.png)
+
+### Edit Profile
+
+The edit profie page renders a form with prefilled fields with the existing information for this user. It consists of profie image, name, username, email, phone. Below their is save button and back button. which will update the profile details once submitted.
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717260510/edit-profile_odbbpz.png)
+
+### Delete Profile Confirmation
+
+This page consists of warning message with two buttons - one to go back and one to delete the profile. Delete profile is in red to indicate danger. Once clicked the profile is deleted and is redirected to home page
+
+![Responsive view](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717260510/delete-profile_lmz8tj.png)
+
+[Back to Table of contents](#table-of-contents)
 
 ## Credits
 
