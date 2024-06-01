@@ -10,13 +10,13 @@ body {
     background-color: rgb(154, 179, 209);
 }
 
-
 /* Body background-image  details */
 #hero-image {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     max-height: 550px;
+    width: 100%;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;

@@ -338,6 +338,9 @@ This page consists of warning message with two buttons - one to go back and one 
 
 3. Password reset
 
+## Testing
+
+Testing documentation can be found [here](TESTING.md).
 
 ## Credits
 
