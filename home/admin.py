@@ -7,9 +7,3 @@ from django_summernote.admin import SummernoteModelAdmin
 admin.site.register(Profile)
 admin.site.register(Dog)
 admin.site.register(Listing)
-
-
-
-
-# # class DogAdmin(SummernoteModelAdmin):
-#     summernote_fields = ('description')

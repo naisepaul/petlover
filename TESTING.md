@@ -44,3 +44,55 @@ I ran the code for all the pages through the [W3C HTML Validator](https://valida
 </details>
 
 ---
+
+### CSS Validation
+
+I ran the CSS code through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input). All code passed the validation tests. Results below.
+
+
+<details><summary>CSS Validation Results Table</summary>
+
+| **Feature**    | **Expected Outcome**                  | **Test Performed**                                   | **Result**                                                                                                              | **Pass / Fail** |
+|----------------|---------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|-----------------|
+| CSS Validation | Page passes validation with no errors | Ran CSS through https://jigsaw.w3.org/css-validator/ | no errors | PASS            |
+
+</details>
+
+<details><summary>Validation Final Results Screenshot</summary>
+
+<img src="https://res.cloudinary.com/dmhdrvehj/image/upload/v1717279231/deblhc6uynu71mcxtv6z.png">
+
+</details>
+
+---
+
+### JavaScript
+
+I ran the JavaScript code through [JSHint](https://jshint.com/). For full results see the dropdowns below.
+
+<details><summary>JavaScript Results Table</summary>
+
+| **Feature** | **Expected Outcome** | **Test Performed** | **Result** | **Pass / Fail** |
+|---|---|---|---|---|
+| **script.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | No Errors | PASS |
+
+</details>
+
+### Python
+
+I ran the app.py code through [https://pep8ci.herokuapp.com/](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
+
+<details><summary>Python Results Table</summary>
+
+| **App** | **File** | **Expected Outcome** | **Test Performed** | **Result** | **Pass / Fail** |
+|---|---|---|---|---|---|
+| Petlover | settings | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
+| Petlover | urls | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | Code passes with no errors | PASS |
+| home | urls | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | Code passes with no errors | PASS |
+| home | views | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | Line too long | PASS |
+| home | choice | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
+| home | forms | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
+| home | models | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
+| home | signals | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
+
+</details>

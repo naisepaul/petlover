@@ -1,27 +1,27 @@
 '''
- All choices for the dog listings are here 
+All choices for the dog listings are here
 '''
 
 DOG_BREED = (
 
-    ('labrador retriever' , 'Labrador Retriever'),
-    ('german shepherd' , 'German Shepherd'),
+    ('labrador retriever', 'Labrador Retriever'),
+    ('german shepherd', 'German Shepherd'),
     ('golden retriever', 'Golden Retriever'),
-    ('bulldog' , 'Bulldog'),
-    ('beagle' , 'Beagle'),
-    ('poodle' , 'Poodle'),
+    ('bulldog', 'Bulldog'),
+    ('beagle', 'Beagle'),
+    ('poodle', 'Poodle'),
     ('french bulldog', 'French Bulldog'),
-    ('boxer' , 'Boxer'),
-    ('dachshund' , 'Dachshund'),
-    ('siberian husky' , 'Siberian Husky'),
-    ('yorkshire terrier' , 'Yorkshire Terrier'),
-    ('rottweiler' , 'Rottweiler'),
-    ('shih tzu' , 'Shih Tzu'),
-    ('great dane' , 'Great Dane'),
+    ('boxer', 'Boxer'),
+    ('dachshund', 'Dachshund'),
+    ('siberian husky', 'Siberian Husky'),
+    ('yorkshire terrier', 'Yorkshire Terrier'),
+    ('rottweiler', 'Rottweiler'),
+    ('shih tzu', 'Shih Tzu'),
+    ('great dane', 'Great Dane'),
     ('australian shepherd', 'Australian Shepherd'),
     ('doberman pinscher', 'Doberman Pinscher'),
-    ('border collie' , 'Border Collie'),
-    ('shetland sheepdog','Shetland Sheepdog'),
+    ('border collie', 'Border Collie'),
+    ('shetland sheepdog', 'Shetland Sheepdog'),
     ('boston terrier', 'Boston Terrier'),
 
 )
@@ -63,15 +63,13 @@ COUNTIES = (
 
 SEX_CHOICES = (
         ('M', 'Male'),
-        ('F', 'Female'),     
+        ('F', 'Female'),
 )
 
 TEMPERAMENT = (
-    ('friendly','Friendly'),
+    ('friendly', 'Friendly'),
     ('affectionate', 'Affectionate'),
     ('protective', 'Protective'),
     ('active', 'Active'),
     ('loyal', 'Loyal'),
 )
-
-
