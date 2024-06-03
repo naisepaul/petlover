@@ -54,12 +54,16 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
     - [Languages Used](#languages-used)
     - [Python Modules](#python-modules)
     - [Technologies and programs](#technologies-and-programs)
+- [Deployment](#deployment)
+    - [Deploy on Heroku](#deploy-on-heroku)
+    - [Fork the repository](#fork-the-repository)
+    - [Clone the repository](#clone-the-repository)
 - [Credits](#credits)
   - [Code](#code)
   - [content](#content) 
+  - [Images](#images)
   - [Mockup](#mockup)
-  - [Images](#images-1)
-
+ 
 ## User Experience
 
 ### Website goal
@@ -388,6 +392,49 @@ Testing documentation can be found [here](TESTING.md).
   - Js Hint was used to validate the JavaScript code.
   - CI Python Linter was used to validate the Python code.
 
+## Deployment
+
+  ### Deploy on Heroku
+
+1. Create Pipfile
+
+  - In the terminal enter the command  pip3 freeze > requirements.txt, and a file with all requirements will be created.
+
+2. Setting up Heroku
+
+  - Go to the Heroku website (https://www.heroku.com/)
+  - Login to Heroku and choose Create App
+  - Click New and Create a new app
+  - Choose a name and select your location
+  - Go to the Resources tab
+  - From the Resources list select Heroku Postgres
+  - Navigate to the Deploy tab
+  - Click on Connect to Github and search for your repository
+  - Navigate to the Settings tab
+  - Reveal Config Vars and add your aws, Database URL and Secret key.
+
+3. Deployment on Heroku
+
+  - Go to the Deploy tab.
+  - Choose the main branch for deploying and enable automatic deployment
+  - Select manual deploy for building the App
+### Fork the repository
+
+For creating a copy of the repository on your account and change it without affecting the original project, useFork directly from GitHub:
+
+  - On My Repository Page, press Fork in the top right of the page.
+  - A forked version of my project will appear in your repository.
+
+### Clone the repository
+
+For creating a clone of the repository on your local machine, useClone:
+
+  - On My Repository Page, click the Code green button, right above the code window
+  - Chose from HTTPS, SSH and GitClub CLI format and copy (preferably HTTPS)
+  - In your IDE open Git Bash
+  - Enter the command git clone followed by the copied URL
+  - Your clone was created
+
 ## Credits
 
 To complete this project I used Code institue student template: [Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
@@ -408,13 +455,16 @@ To complete this project I used Code institue student template: [Gitpod full tem
 
 - [AutoMarket](https://github.com/Dayana-N/AutoMarket-PP4)
 
-### Mockup
-
-- [Mockup screenshot generator](https://ui.dev/amiresponsive)
-
 ### Images
 
 - www.freepik.com
 
+### Mockup
+  - [Mockup screenshot generator](https://ui.dev/amiresponsive)
+  
+### Acknowledgements
+  - To complete this project I used Code institue student template: Gitpod full template
+  - [Stackoverflow](https://stackoverflow.com/)
 
-
+### Comments
+  I really enjoyed working on this project. My idea was to develop a real world application with user friendly design.
