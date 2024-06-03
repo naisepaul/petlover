@@ -145,3 +145,23 @@ The manual testing was done on the following devices
 
 </details>
 
+## Manual Testing
+
+- Home Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Navbar|Click on logo in Navbar|Redirect to Home |Pass|Navbar present on all pages |
+||Click on Home link in Navbar|Redirect to Home |Pass|Navbar present on all pages |
+||Click on Listings link in Navbar|Redirect to Listings Page |Pass|Navbar present on all pages |
+||Click on Create Listing link in Navbar|Redirect to Create Listing Page |Pass|Navbar present on all pages |
+||Click on Profile link in Navbar|Redirect to My Profile Page |Pass|Navbar present on all pages |
+||Click on Log Out link in Navbar|Redirect to Create Listing Page |Pass|Navbar present on all pages |
+||Click on Login/Sign Up in Navbar|Redirect to Login Page |Pass|Navbar present on all pages |
+|Hero section|Open Home page. Ensure the hero section loads as it should|Hero section loads as it should |Pass| |
+|Recent Listings|Open the Home page. Scroll down to recent listings. Ensure the most recent listings are showing by comparing the time added stamp|The most recent 6 listings are displayed |Pass| |
+||Open the Create Listing page and create a listing. Ensure it shows as first in the most recent listings section |The added listing is displayed as most recent |Pass| |
+|Listing Card| Click on the listing card photo. Ensure it redirects to the correct single listing page |When clicked each card redirects to the correct single listing page |Pass| |
+|| Click on the view details button. Ensure it redirects to the correct single listing page |When clicked each card button redirects to the correct single listing page |Pass| |
+|| Go to the Create Listings page and create a new listing. Ensure the details displayed on the card are accurate |The information displayed on the card is accurate |Pass| |
+|Footer|Click on all of the social links in the footer. Ensure each one opens the correct page in a new tab |All links open the correct page in a new tab |Pass| |
