@@ -263,4 +263,3 @@ The manual testing was done on the following devices
 | As a registered user I want to be able to delete a listing so that it is not available for other users to view. | ![Delete Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717258733/delete-listing_ovd9rr.png)| <mark>PASS<mark> |
 | As a registered user I want to be able to see all of the listings I have created so that I can manage and keep track of the dogs I have listed for sale. | ![My Listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230674/my-listings_eb1l2q.png)| <mark>PASS<mark> |
 | As a site owner I want to ensure that the user is prompted with a notification message when performing CRUD operations or login/logout, and signup so that the user is informed about the outcome of the action taken | ![Flash messages](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717419062/flash-messages_z5sc1y.png)| <mark>PASS<mark> |
-
