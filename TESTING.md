@@ -244,3 +244,23 @@ The manual testing was done on the following devices
 |Go back button|Click on the go back button. Ensure it sends back to previous page |When clicked the button brings back to previous page.|Pass||
 |Log out button|Click on the Log out button.To ensure the user is logged out: Open developer tools and navigate to application. On the side select cookies and check for sessionid being removed.The user should be redirected to the the home page. Ensure flash message is displayed |The user is redirected to the home page. Flash message is displayed. Sessionid is removed from cookies.|Pass||
 
+## User Story Testing
+
+|User Story|Screenshot|Result|
+| --- | --- | --- |
+| As a developer I can set up a new Django project so that I can create the project's structure | The project was set up successfully| <mark>PASS<mark>  |
+| As a developer I can connect database and media storage so that the user's stored data is stored successfully | Database and media storage were connected successfully| <mark>PASS<mark> |
+| As a developer I can deploy the application early so that I can confirm that the initial setup is working and can continue testing the application during development | The application was deployed after the initial set up to confirm everything is working as expected| <mark>PASS<mark> |
+| As a developer I can create wireframes so that the layout of the website is clear for desktop and mobile | wireframes were created and are included in the relevant section of the [README](./README.md)| <mark>PASS<mark> |
+| As a user I want to be able to register an account so that I can have access to all functionality of Petlover. | ![Sign up](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259980/sign-up_eqiofx.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to log in to my account so I can view my profile page and my listings. | ![Log In](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259980/log-in_ydtyfo.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to see my profile page so that I can update my information | ![My Profile](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230458/my-profile_ic18io.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to delete my profile and all my listings if I do not wish to use the services of Petlover. | ![Delete Profile](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717260510/delete-profile_lmz8tj.png)| <mark>PASS<mark> |
+| As a user, I want to be able to see the most recent listings on the landing page so that I can quickly and easily discover the latest items available for sale | ![Recent Listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717225317/recent-listings_povy8e.png)| <mark>PASS<mark> |
+| As a user I want to be able to see details about the listing such as a description, image, and seller’s details so that I can find suitable dogs and make informed decisions before I contact the seller | ![Single Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717259554/single-listing_pctxzi.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to create a listing so that I can advertise dogs for sale. | ![Create Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230200/create-listings_rxklqv.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to edit a listing so that I can correct any mistakes or adjust the listed price | ![Edit Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717258435/edit-listing_sv9zmh.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to delete a listing so that it is not available for other users to view. | ![Delete Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717258733/delete-listing_ovd9rr.png)| <mark>PASS<mark> |
+| As a registered user I want to be able to see all of the listings I have created so that I can manage and keep track of the dogs I have listed for sale. | ![My Listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717230674/my-listings_eb1l2q.png)| <mark>PASS<mark> |
+| As a site owner I want to ensure that the user is prompted with a notification message when performing CRUD operations or login/logout, and signup so that the user is informed about the outcome of the action taken | ![Flash messages](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717419062/flash-messages_z5sc1y.png)| <mark>PASS<mark> |
+
