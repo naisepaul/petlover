@@ -16,6 +16,7 @@ Back to [README.MD](README.md)
 
 - [Responsiveness](#responsiveness)
 - [Browser Compatibility](#browser-compatibility)
+- [Lighthouse](#lighthouse)
 - [Manual Testing](#manual-testing)
 - [User Story Testing](#user-story-testing)
 
@@ -116,3 +117,31 @@ The manual testing was done on the following devices
 | Google Chrome | All pages, load as expected. All features work as expected | PASS | --- |
 | Firefox | All pages, load as expected. All features work as expected | PASS | --- |
 | Edge | All pages, load as expected. All features work as expected | PASS | ---|
+
+## Lighthouse
+
+<details><summary>Lighthouse</summary>
+
+|Page|Validator|Result|
+| --- | --- | --- |
+| Home Desktop |![home](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-home-desktop_izh5mh.png) | <mark>PASS<mark> |
+| Home Mobile |![home](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-home-mobile_nqrp24.png) | <mark>PASS<mark> |
+| Listings Desktop|![listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-listing-desktop_vsahxl.png) | <mark>PASS<mark> |
+| Listings Mobile|![listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-listing-mobile_wbjppy.png) | <mark>PASS<mark> |
+| Single Listing Desktop|![Single Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-Single-listing-desktop_nzspdq.png) | <mark>PASS<mark> |
+| Single Listing Mobile|![Single Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717413761/lighthouse-Single-listing-mobile_urzfqe.png) | <mark>PASS<mark> |
+| Log In Desktop|![Log In](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414499/lighthouse-login-desktop_kmgzda.png) | <mark>PASS<mark> |
+| Log In Mobile|![Log In](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414499/lighthouse-login-mobile_zeppvm.png) | <mark>PASS<mark> |
+| Sign Up Desktop|![Sign Up](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414472/lighthouse-signup-desktop_cosics.png) | <mark>PASS<mark> |
+| Sign Up Mobile|![Sign Up](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414472/lighthouse-signup-mobile_jwmzl4.png) | <mark>PASS<mark> |
+| Log Out Conf Desktop|![home](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414135/lighthouse-logout-desktop_pi0wq2.png) | <mark>PASS<mark> |
+| Log Out Conf Mobile|![home](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717414135/lighthouse-logout-mobile_mmkk68.png) | <mark>PASS<mark> |
+| Create Listing Desktop|![Create Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415459/lighthouse-createlisting-desktop_xqsvgh.png) | <mark>PASS<mark> |
+| Create Listing Mobile|![Create Listing](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415460/lighthouse-createlisting-mobile_ozp13w.png) | <mark>PASS<mark> |
+| My Profile Desktop|![My Profile](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415460/lighthouse-myprofile-desktop_ymxqg0.png) | <mark>PASS<mark> |
+| My Profile Mobile|![My Profile](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415462/lighthouse-myprofile-mobile_nmuzun.png) | <mark>PASS<mark> |
+| My Listings Desktop|![My Listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415460/lighthouse-mylisting-desktop_pjqbs4.png) | <mark>PASS<mark> |
+| My Listings Mobile|![My Listings](https://res.cloudinary.com/dmhdrvehj/image/upload/v1717415460/lighthouse-mylisting-mobile_jphfab.png) | <mark>PASS<mark> |
+
+</details>
+
