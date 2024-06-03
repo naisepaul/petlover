@@ -42,7 +42,7 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
     - [Edit Listing](#edit-listing)
     - [Delete Listing](#delete-listing)
     - [View Listing](#view-listing)
-    - [Sign In Page](#sign-in-page)
+    - [Log In Page](#log-in-page)
     - [Sign Up Page](#sign-up-page)
     - [Sign Out Confirmation](#sign-out-confirmation)
     - [Edit Profile](#edit-profile)
@@ -50,6 +50,10 @@ Welcome to the [PetLover](https://petlover-6900a2845617.herokuapp.com/). The pro
 
 - [Future Features](#future-features)
 - [Testing](#testing)
+- [Technologies And Languages](#technologies-and-languages)
+    - [Languages Used](#languages-used)
+    - [Python Modules](#python-modules)
+    - [Technologies and programs](#technologies-and-programs)
 - [Credits](#credits)
   - [Code](#code)
   - [content](#content) 
@@ -341,6 +345,48 @@ This page consists of warning message with two buttons - one to go back and one 
 ## Testing
 
 Testing documentation can be found [here](TESTING.md).
+
+## Technologies And Languages
+
+### Languages Used
+
+  - HTML
+  - CSS
+  - JavaScript
+  - Bootstrap
+  - Python
+  - Django
+
+### Python Modules
+
+  - dj-database-url - This library is used to parse the database URL specified in the DATABASE_URL environment variable, which is commonly used for configuring database connections in Django projects.
+
+  - django-storages - Django Storages is a collection of custom storage backends for Django, including support for storing files on remote services like Cloudinary.
+
+  - gunicorn - Gunicorn is a popular WSGI (Web Server Gateway Interface) HTTP server for running Python web applications, including Django applications, in a production environment.
+
+  - Pillow - Pillow is a Python Imaging Library (PIL) fork that provides tools for working with images in various formats.
+
+  - psycopg2 - Psycopg2 is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+
+### Technologies and programs
+
+  - Favicon Generator was used to generate Favicon
+  - GitHub is the hosting site used to store the code for the website.
+  - Git was used as a version control software to commit and push the code to the GitHub repository.
+  - Heroku - used for deploying the project
+  - Font Awesome - for creating atractive UX with icons
+  - Bootstrap5 - for adding predifined styled elements and creating responsiveness
+  - LightHouse - for testing performance
+  - Photoshop was used for creating the mockup images of the website during planning stage.
+  - Google Fonts was used to import fonts.
+  - Google Chrome Lighthouse was used during the testing of the website.
+  - Google Chrome Developer Tools was used during testing, debugging and making the website responsive.
+  - Cloudinary was used to store media files.  
+  - W3C HTML Validator was used to check for errors in the HTML code.
+  - W3C CSS Validator was used to check for errors in the CSS code
+  - Js Hint was used to validate the JavaScript code.
+  - CI Python Linter was used to validate the Python code.
 
 ## Credits
 
