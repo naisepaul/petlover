@@ -78,6 +78,8 @@ I ran the JavaScript code through [JSHint](https://jshint.com/). For full result
 
 </details>
 
+---
+
 ### Python
 
 I ran the app.py code through [https://pep8ci.herokuapp.com/](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
@@ -96,3 +98,21 @@ I ran the app.py code through [https://pep8ci.herokuapp.com/](https://pep8ci.her
 | home | signals | Code passes with no errors | Ran app.py through https://extendsclass.com/python-tester.html | whitespace errors | PASS |
 
 </details>
+
+---
+
+## Responsiveness
+
+The manual testing was done on the following devices
+
+- Dell laptop 14 inch
+- Apple iPhone 13 pro max
+- Oneplus 10
+
+## Browser Compatibility
+
+|Browser|Result|Pass/Fail|Notes|
+| --- | --- | --- | ---|
+| Google Chrome | All pages, load as expected. All features work as expected | PASS | --- |
+| Firefox | All pages, load as expected. All features work as expected | PASS | --- |
+| Edge | All pages, load as expected. All features work as expected | PASS | ---|

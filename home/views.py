@@ -122,6 +122,7 @@ def profile_delete(request):
 
     if request.method == 'POST':
         user.delete()
+        messages.success(request, "Profile Deleted")
         return redirect('/')  # Redirect to home
 
     return render(request, 'profile/profile_delete.html')
@@ -212,6 +213,7 @@ def listing_edit(request, id):
         if listing_form.is_valid() and dog_form.is_valid():
             listing_form.save()
             dog_form.save()
+            messages.success(request, 'Listing Edited successfully.')
             return redirect('/my-listings')
     else:
         listing_form = ListingForm(instance=listing)
