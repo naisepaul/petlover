@@ -165,3 +165,82 @@ The manual testing was done on the following devices
 || Click on the view details button. Ensure it redirects to the correct single listing page |When clicked each card button redirects to the correct single listing page |Pass| |
 || Go to the Create Listings page and create a new listing. Ensure the details displayed on the card are accurate |The information displayed on the card is accurate |Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each one opens the correct page in a new tab |All links open the correct page in a new tab |Pass| |
+
+- Listings Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|listing card|||Pass|Tested on home page|
+|Footer|Click on all of the social links in the footer. Ensure each one opens the correct page in a new tab |All links open the correct page in a new tab |Pass| |
+
+- Single Listing Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Back button|Open the single listing page. Click on the back button. Ensure it sends you back to the previous page|When clicked the button brings you back to the previous page.|Pass||
+|Listing details|Ensure all the dogs details are accurate with the details used when creating the listing. Ensure all icons display as they should|All icons display as they should, and the information is accurate.|Pass||
+|Description|Scroll to the description section. Ensure the accurate description is displayed |The accurate description is displayed|Pass||
+
+- Create listing Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+||Click on each drop down field to ensure correct options are displayed|Correct options are displayed|Pass||
+
+- Edit listing Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Form|||Pass|Tested at create listing|
+||Open edit listing page. Ensure the form is populated with the correct listing's details|The form is populated with the correct listing's details|Pass||
+
+- My Profile Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|My Profile|Open my profile page. Ensure the image is displaying correctly.|The image is displaying correctly.|Pass||
+|Edit profile button|Click on the edit profile button. Ensure it redirects to the edit profile page.|The edit profile button redirects to the edit profile page.|Pass||
+|Delete profile button|Click on the delete profile button. Ensure it redirects to the delete profile page.|The delete profile button redirects to the delete profile page.|Pass||
+||Click on my listings link on the sidebar nav. Ensure it redirects to my listings page| Redirects to my listings page|Pass||
+
+- My Listings Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|My Listings|When on the my listings page ensure the listings displayed were created by the authenticated user.|The listings displayed were created by the authenticated user. |Pass||
+||Click on the edit button. Ensure it redirects to the edit listing page.|The button redirects to the edit listing page. |Pass||
+||Click on the delete button. Ensure it redirects to the delete listing page.|The button redirects to the delete listing page. |Pass||
+||Click on the view button. Ensure it redirects to the single listing page.|The button redirects to the single listing page. |Pass||
+
+- Delete Listing Page 
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Go back button|Click on the go back button. Ensure it sends back to previous page |When clicked the button brings back to previous page.|Pass||
+|Delete Listing|Click on the delete listing button. Ensure it deletes the listing and the user is redirected to the my listings page. |The user is redirected to the my listings page. By checking in the admin pannel can be confirmed the was deleted|Pass||
+
+- Log In page
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Form|Fill all fields with correct data in the expected format. Click Log In. Ensure Flash message appears and the user is redirected to the home page. To ensure the user is logged in: Open developer tools and navigate to application. On the side select cookies and check for sessionid being added. |When submitted success flash message is presented, the user is redirected to the home page. |Pass||
+| | Fill in the form with incorrect details. Ensure the user is not logged in and flash message appears| Flash message appears in warning letting the user know they have entered incorrect details. The user is not signed in| Pass| |
+| | Click on the forgot password link. ensure it redirects to the reset password page.| The user is redirected to the reset password page| Pass| |
+| | Click on the register here link. ensure it redirects to sign up page.| The user is redirected to the sign up page| Pass| |
+
+- Sign Up Page
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Form|Fill all fields with correct data in the expected format. Click Sign Up. Ensure Flash message appears and the user is redirected to the my profile page.|When submitted success flash message is presented, the user is redirected to the my profile page.|Pass||
+||Fill all fields with correct data but one. Click Sign Up. Ensure the form does not submit and appropriate message is displayed. Repeat for all fields. |Form did not submit, appropriate message was displayed|Pass||
+| | Click on the Already have an account? Log In link. ensure it redirects to the login page.| The user is redirected to the login page| Pass| |
+
+
+- Sign Out confirmation
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Go back button|Click on the go back button. Ensure it sends back to previous page |When clicked the button brings back to previous page.|Pass||
+|Log out button|Click on the Log out button.To ensure the user is logged out: Open developer tools and navigate to application. On the side select cookies and check for sessionid being removed.The user should be redirected to the the home page. Ensure flash message is displayed |The user is redirected to the home page. Flash message is displayed. Sessionid is removed from cookies.|Pass||
+
