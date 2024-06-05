@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from .models import Profile, Dog, Listing
 from .forms import ProfileForm, DogListingForm, ListingForm
 from . import choice
-
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Create your views here.
 
@@ -18,7 +18,6 @@ def index(request):
     return render(request, 'index.html', {'recent_listings': recent_listings})
 
 # user login page
-
 
 def login_account(request):
     if request.method == "POST":
@@ -132,6 +131,11 @@ def profile_delete(request):
 
 def listings(request):
     listings = Listing.objects.select_related('dog').order_by('-created_at').all()
+    # return render(request, 'listings/listings.html', {'listings': listings})
+    paginator = Paginator(listings, 6)  # Show 6 contacts per page.
+
+    page_number = request.GET.get("page")
+    listings = paginator.get_page(page_number)
     return render(request, 'listings/listings.html', {'listings': listings})
 
 # single listing page

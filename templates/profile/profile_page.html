@@ -49,7 +49,7 @@ My Profile
                     <div class="profile-details-container">
                         <h5 class="mb-3">{{ user.username }}</h5>
                         <p>{{ user.email }}</p>
-                        <p>{{ user.profile.name }}</p>
+                        <p>{{ user.profile.name|capfirst }}</p>
                         <p>{{ user.profile.phone }}</p>
                     </div>
                     <div class="text-center mt-3">

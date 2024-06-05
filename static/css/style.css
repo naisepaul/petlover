@@ -125,6 +125,24 @@ body {
         background-color: #0056b3; 
 }
 
+/* Pagination */
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed for spacing */
+}
 
+.pagination {
+    display: inline-block;
+}
 
+.pagination .step-links {
+    display: flex;
+    align-items: center;
+}
+
+.pagination .step-links a,
+.pagination .step-links .current {
+    margin: 0 5px; /* Adjust for spacing between elements */
+}
